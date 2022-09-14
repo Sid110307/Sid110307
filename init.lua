@@ -1,7 +1,18 @@
 -- Config
-local Plug = vim.fn['plug#']
-vim.cmd("set number")
-vim.cmd("set tabstop=4")
+local Plug = vim.fn["plug#"]
+local nnoremap = function(lhs, rhs)
+    vim.api.nvim_set_keymap("n", lhs, rhs, { noremap = true, silent = true })
+end
+
+vim.opt.number = true
+
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.smartindent = true
+
+vim.opt.guifont = "Fira Code 12"
+vim.opt.mouse = "a"
+vim.opt.mousefocus = true
 
 -- Plugins
 vim.call("plug#begin")
@@ -11,38 +22,43 @@ Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'TimUntersberger/neogit'
 Plug 'sbdchd/neoformat'
+Plug 'joshdick/onedark.vim'
 
 -- Custom Plugins
-Plug '~/.config/plugin/vim-qas'
+Plug '~/.config/syntax/vim-qas'
 
 vim.call("plug#end")
 
 -- NERDTree
 vim.cmd("au VimEnter * NERDTree")
+vim.g.NERDTreeIgnore = {"^node_modules$", "\\~$"}
 
-vim.api.nvim_set_keymap("n", "<F9>", "<cmd>NERDTreeToggle<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<F8>", "<cmd>NERDTreeRefreshRoot<CR>", {noremap = true, silent = true})
+nnoremap([[<F9>]], [[:NERDTreeToggle<CR>]])
+nnoremap([[<F8>]], [[:NERDTreeRefreshRoot<CR>]])
 
 -- Cursor Movement
 
-vim.api.nvim_set_keymap("n", "<C-k>", "<cmd>wincmd k<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-j>", "<cmd>wincmd j<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-h>", "<cmd>wincmd h<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-l>", "<cmd>wincmd l<CR>", {noremap = true, silent = true})
+nnoremap([[<C-k>]], [[:wincmd k<CR>]])
+nnoremap([[<C-j>]], [[:wincmd j<CR>]])
+nnoremap([[<C-h>]], [[:wincmd h<CR>]])
+nnoremap([[<C-l>]], [[:wincmd l<CR>]])
 
 -- QAS
 vim.cmd("autocmd BufRead,BufNewFile *.qas set filetype=qas")
 
 -- Neogit
-local neogit = require('neogit')
+local neogit = require("neogit")
 neogit.setup {}
 
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>Neogit<CR>", {noremap = true, silent = true})
+nnoremap([[<leader>g]], [[:Neogit<CR>]])
 
 -- Neoformat
-vim.api.nvim_set_keymap("n", "<leader>f", "<cmd>Neoformat<CR>", {noremap = true, silent = true})
+nnoremap([[<leader>f]], [[:Neoformat<CR>]])
 
-vim.cmd("augroup neoformat")
-vim.cmd("\tautocmd!")
-vim.cmd("\tautocmd BufWritePre * undojoin | Neoformat")
-vim.cmd("augroup END")
+vim.cmd([[
+	augroup fmt
+		autocmd!
+		autocmd BufWritePre * undojoin | Neoformat
+	augroup END
+]])
+
