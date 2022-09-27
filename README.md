@@ -8,6 +8,5 @@
 	- [Twitter](https://twitter.com/CoolorFoolSRS/)
 	- [Reddit](https://reddit.com/u/CoolorFoolSRS/)
 
-![](https://github-readme-stats.vercel.app/api?username=Sid110307&show_icons=true)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Sid110307&langs_count=10&layout=compact)
-
+![](https://github-readme-stats-sid110307.vercel.app/api?username=Sid110307&show_icons=true)
+![](https://github-readme-stats-sid110307.vercel.app/api/top-langs/?username=Sid110307&langs_count=10&layout=compact)
