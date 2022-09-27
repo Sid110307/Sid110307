@@ -37,7 +37,6 @@ nnoremap([[<F9>]], [[:NERDTreeToggle<CR>]])
 nnoremap([[<F8>]], [[:NERDTreeRefreshRoot<CR>]])
 
 -- Cursor Movement
-
 nnoremap([[<C-k>]], [[:wincmd k<CR>]])
 nnoremap([[<C-j>]], [[:wincmd j<CR>]])
 nnoremap([[<C-h>]], [[:wincmd h<CR>]])
