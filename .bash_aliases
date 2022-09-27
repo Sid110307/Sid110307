@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias rm-trash='echo -n "Emptying Trash... "; rm -rf /home/sid/.local/share/Trash/**; echo -e "\033[0;32mDone.\033[0m"'
+alias rm-trash='echo -n "Emptying Trash... "; command rm -rf /home/sid/.local/share/Trash/**; echo -e "\033[0;32mDone.\033[0m"'
 alias rm='trash'
 alias tree='tree -aI ".git|.idea|.node\_modules"'
 
@@ -10,6 +10,7 @@ alias pip='pip3'
 alias fun-date='while true; do echo "$(date "+%d/%m/%Y %T" | toilet -f term -F border --gay)"; sleep 1; printf "\033[F\033[F\033[F"; done'
 alias ccat='pygmentize -g'
 alias cpu-usage='while true; do echo "$(ps -A -o pcpu | tail -n+2 | paste -sd+ | bc)%"; echo -e "\033[F\033[F"; done'
+alias webshare='curl -F "sprunge=<-" http://sprunge.us | xclip'
 
 alias cls='clear'
 alias firefox='/opt/firefox/firefox'
@@ -25,3 +26,8 @@ function git-status-all() {
 
 	find $directory -maxdepth 1 -type d \( ! -name $directory \) -exec bash -c "$cmd" \;
 }
+
+function mcd() {
+		mkdir -p "$1" && cd "$1"
+}
+
