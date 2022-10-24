@@ -2,7 +2,7 @@
 
 alias rm-trash='echo -n "Emptying Trash... "; command rm -rf /home/sid/.local/share/Trash/**; echo -e "\033[0;32mDone.\033[0m"'
 alias rm='trash'
-alias tree='tree -aI ".git|.idea|.node\_modules"'
+alias tree='tree -aI "**/.git|**/.idea|**/.node\_modules"'
 
 alias py='python3.10'
 alias pip='pip3'
@@ -30,4 +30,8 @@ function git-status-all() {
 function mcd() {
 		mkdir -p "$1" && cd "$1"
 }
+
+alias weather='curl wttr.in'
+alias ext-ip='curl ip.me'
+alias please='sudo'
 
