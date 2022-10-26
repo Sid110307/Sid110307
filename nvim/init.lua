@@ -1,7 +1,7 @@
 -- Config
 local Plug = vim.fn["plug#"]
 local nnoremap = function(lhs, rhs)
-    vim.api.nvim_set_keymap("n", lhs, rhs, { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", lhs, rhs, { noremap = true, silent = true })
 end
 
 vim.opt.number = true
@@ -23,6 +23,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'TimUntersberger/neogit'
 Plug 'sbdchd/neoformat'
 Plug 'joshdick/onedark.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 -- Custom Plugins
 Plug '~/.config/syntax/vim-qas'
@@ -61,3 +62,26 @@ vim.cmd([[
 	augroup END
 ]])
 
+-- Tree-sitter
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+vim.wo.fillchars = "fold:\\"
+vim.wo.foldnestmax = 3
+vim.wo.foldminlines = 1
+
+require("nvim-treesitter.configs").setup {
+  ensure_installed = "all",
+  sync_install = true,
+  auto_install = true,
+  highlight = {
+    enable = true,
+	disable = function(lang, buf)
+        local max_filesize = 100 * 1024 -- 100 KB
+        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+        if ok and stats and stats.size > max_filesize then
+            return true
+        end
+    end,
+  },
+}

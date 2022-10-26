@@ -47,9 +47,7 @@ if [ -d "/usr/local/go/src" ]; then
 fi
 
 if [ -d "/usr/local/cuda-11.7/bin" ]; then
-    PATH="$PATH:/usr/local/cuda-11.7/bin"
+	PATH="$PATH:/usr/local/cuda-11.7/bin"
 fi
 
-# Added by Toolbox App
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
-

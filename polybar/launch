@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+polybar-msg cmd quit
+MONITOR=$(polybar --list-monitors | cut -d ":" -f1)
+
+polybar dummy-bar 2>&1 | tee /tmp/polybar.log &
+disown
+polybar left-bar 2>&1 | tee -a /tmp/polybar.log &
+disown
+polybar right-bar 2>&1 | tee -a /tmp/polybar.log &
+disown
+
+echo "Bars launched."
