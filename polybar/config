@@ -35,6 +35,7 @@ cursor-scroll = pointer
 enable-ipc = true
 bottom = true
 monitor = ${env:MONITOR:}
+# TODO: download_speed = ${env:DOWNSPEED:}
 
 [bar/dummy-bar]
 width = 100%
