@@ -51,3 +51,4 @@ if [ -d "/usr/local/cuda-11.7/bin" ]; then
 fi
 
 export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+

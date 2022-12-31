@@ -1,5 +1,4 @@
 ;
-;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
 ;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
 ;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
@@ -15,7 +14,7 @@ primary = #f0c674
 secondary = #676e7d
 alert = #e52f2f
 
-[status-bar]
+[bar/status-bar]
 height = 32
 radius = 10
 background = ${colors.background}
@@ -23,9 +22,8 @@ foreground = ${colors.foreground}
 border-size = 4
 border-color = #00000000
 line-size = 3
-module-margin = 1
-padding-left = 0
 padding-right = 1
+module-margin = 1
 separator = |
 separator-foreground = ${colors.secondary}
 font-0 = SF Mono:size=10;2
@@ -36,28 +34,12 @@ enable-ipc = true
 bottom = true
 monitor = ${env:MONITOR:}
 # TODO: download_speed = ${env:DOWNSPEED:}
-
-[bar/dummy-bar]
-width = 100%
-height = 32
-override-redirect = false
-
-[bar/left-bar]
-inherit = status-bar
-width = 32.5%
 modules-left = xworkspaces xwindow
-
-[bar/right-bar]
-inherit = status-bar
-tray-position = right
-override-redirect = true
-wm-restack = i3
-width = 67.5%
-offset-x = 32.5%
 modules-right = volume temperature iface disk memory date mediaplayer openvpn
+tray-position = right
+wm-restack = i3
 
 [module/xworkspaces]
-inherit = left-side
 type = internal/xworkspaces
 label-active = %name%
 label-active-background = ${colors.background-alt}
@@ -73,12 +55,10 @@ label-empty-background = ${colors.background}
 label-empty-padding = 1
 
 [module/xwindow]
-inherit = left-side
 type = internal/xwindow
 label = %{F#A54242} %{F-}%title:0:55:...%
 
 [module/volume]
-inherit = right-side
 type = internal/pulseaudio
 use-ui-max = true
 label-volume = %{F#F0C674}: %{F-}%percentage%%
@@ -87,7 +67,6 @@ label-volume-underline = ${colors.primary}
 label-muted-underline = ${colors.secondary}
 
 [module/temperature]
-inherit = right-side
 type = internal/cpu
 interval = 5
 thermal-zone = 0
@@ -101,7 +80,6 @@ interface-type = wired
 label-connected = %{F#F0C674}: %{F#C5C8C6}%local_ip% (%{F#F0C674}%downspeed%%{F#C5C8C6})
 
 [module/disk]
-inherit = right-side
 type = internal/fs
 interval = 10
 warn-percentage = 75
@@ -114,7 +92,6 @@ label-warn-underline = ${colors.alert}
 label-unmounted-underline = ${colors.secondary}
 
 [module/memory]
-inherit = right-side
 type = internal/memory
 interval = 2
 label = %{F#F0C674}RAM: %{F#C5C8C6}%gb_used%/%gb_total% (%percentage_used%%)
@@ -123,7 +100,6 @@ label-underline = ${colors.primary}
 label-warn-underline = ${colors.alert}
 
 [module/date]
-inherit = right-side
 type = internal/date
 interval = 1
 date = %{F#F0C674}%a %{F#C5C8C6}%d-%m-%Y %{F#F0C674}%I:%M %p
@@ -131,7 +107,6 @@ label = %date%
 label-underline = ${colors.primary}
 
 [module/mediaplayer]
-inherit = right-side
 type = custom/script
 exec = ~/.config/polybar/scripts/spotify.sh
 tail = true
@@ -142,7 +117,6 @@ interval = 1
 label-underline = ${colors.primary}
 
 [module/openvpn]
-inherit = right-side
 type = custom/script
 exec = ~/.config/polybar/scripts/openvpn.sh
 tail = true
@@ -150,7 +124,6 @@ click-left = ~/.config/polybar/scripts/openvpn.sh --toggle
 interval = 1
 
 [network-base]
-inherit = right-side
 type = internal/network
 interface = enp3s0
 interval = 5
@@ -163,8 +136,3 @@ label-disconnected-underline = ${colors.alert}
 screenchange-reload = true
 pseudo-transparency = true
 
-[left-side]
-padding-right = 2
-
-[right-side]
-padding-left = 2

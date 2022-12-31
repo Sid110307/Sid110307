@@ -137,10 +137,3 @@ export PATH="/home/sid/custom/sowon:$PATH"
 # add quarklang vm to PATH
 export PATH="/usr/local/quark:$PATH"
 
-# auto mount windows dual-boot filesystem
-sudo mount -t ntfs /dev/sda3 /media/sid/OS/ &> /dev/null
-sudo mount -t ntfs /dev/sda5 /media/sid/Installation\ Drive/ &> /dev/null
-sudo mount -t ntfs /dev/sda6 /media/sid/Sid/ &> /dev/null
-sudo mount -t ntfs /dev/sdc1 /media/sid/Amma\ B/ &> /dev/null
-sudo mount -t ntfs /dev/sdc2 /media/sid/Misc\ Drive/ &> /dev/null
-
