@@ -32,6 +32,18 @@ function mcd() {
 		mkdir -p "$1" && cd "$1"
 }
 
+function update-discord() {
+    if [ ! -f /home/sid/Downloads/discord-*.tar.gz ]; then
+		echo -n "File not found. Downloading... "
+		wget -qO "/home/sid/Downloads/discord-latest.tar.gz" "https://discord.com/api/download?platform=linux&format=tar.gz"
+		echo "Done."
+	fi
+
+	sudo tar -xzf /home/sid/Downloads/discord-latest.tar.gz -C /opt/
+	sudo cp /usr/share/applications/discord.desktop /opt/Discord/discord.desktop
+	sudo rm -rf /home/sid/Downloads/discord-latest.tar.gz
+}
+
 alias weather='curl wttr.in'
 alias ext-ip='curl ip.me'
 
