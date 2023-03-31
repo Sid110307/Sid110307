@@ -4,8 +4,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-	*i*) ;;
-	*) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -14,6 +14,7 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -22,6 +23,9 @@ HISTFILESIZE=2000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# set the editor
+export EDITOR=vim
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -38,7 +42,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-	xterm-color | *-256color) color_prompt=yes ;;
+xterm-color | *-256color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -102,9 +106,8 @@ alias l='ls -lF'
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f /home/sid/.bash_aliases ]; then
-    . /home/sid/.bash_aliases
-fi
+[ -f /home/sid/.bash_aliases ] && . /home/sid/.bash_aliases
+[ -f /home/sid/.bash_inits ] && . /home/sid/.bash_inits
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -128,7 +131,7 @@ export NVM_DIR="/home/sid/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # use LTS version of Node JS
-[ -f "/home/sid/.yarn/bin/nvm" ] && nvm use --lts >> /dev/null
+[ -f "/home/sid/.yarn/bin/nvm" ] && nvm use --lts >>/dev/null
 
 # add custom scripts
 export PATH="/home/sid/custom:$PATH"
@@ -136,4 +139,14 @@ export PATH="/home/sid/custom/sowon:$PATH"
 
 # add quarklang vm to PATH
 export PATH="/usr/local/quark:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
+export ANDROID_HOME=$HOME/Android/Sdk
 

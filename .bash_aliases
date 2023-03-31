@@ -4,13 +4,14 @@ alias rm-trash='echo -n "Emptying Trash... "; command rm -rf /home/sid/.local/sh
 alias rm='trash'
 alias tree='tree -aI "**/.git|**/.idea|**/.node\_modules"'
 
-alias py='python3.10'
-alias pip='pip3'
+alias py=$($HOME/.pyenv/bin/pyenv which python3)
+alias pip=$($HOME/.pyenv/bin/pyenv which pip)
 
 alias fun-date='while true; do echo "$(date "+%d/%m/%Y %T" | toilet -f term -F border --gay)"; sleep 1; printf "\033[F\033[F\033[F"; done'
 alias ccat='pygmentize -g'
 alias cpu-usage='while true; do echo "$(ps -A -o pcpu | tail -n+2 | paste -sd+ | bc)%"; echo -e "\033[F\033[F"; done'
 alias webshare='curl -F "sprunge=<-" http://sprunge.us | xclip'
+alias pyenv-install-latest='pyenv install $(pyenv install --list | grep -v - | grep -v b | grep -v a | tail -1)'
 
 alias cls='clear'
 alias firefox='/opt/firefox/firefox'
@@ -33,5 +34,4 @@ function mcd() {
 
 alias weather='curl wttr.in'
 alias ext-ip='curl ip.me'
-alias please='sudo'
 

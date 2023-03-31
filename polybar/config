@@ -16,13 +16,13 @@ alert = #e52f2f
 
 [bar/status-bar]
 height = 32
-radius = 10
+radius = 12
 background = ${colors.background}
 foreground = ${colors.foreground}
 border-size = 4
 border-color = #00000000
 line-size = 3
-padding-right = 1
+padding-right = 16
 module-margin = 1
 separator = |
 separator-foreground = ${colors.secondary}
@@ -37,6 +37,8 @@ monitor = ${env:MONITOR:}
 modules-left = xworkspaces xwindow
 modules-right = volume temperature iface disk memory date mediaplayer openvpn
 tray-position = right
+tray-detached = true
+tray-offset-x = -8
 wm-restack = i3
 
 [module/xworkspaces]
