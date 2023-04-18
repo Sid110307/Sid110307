@@ -28,6 +28,13 @@ function git-status-all() {
 	find $directory -maxdepth 1 -type d \( ! -name $directory \) -exec bash -c "$cmd" \;
 }
 
+function git-pull-all() {
+	directory=$(if test -z "$1"; then echo "."; else echo "$1"; fi)
+	cmd="cd '{}' && pwd && git pull; echo -e '\n$(printf '=%.0s' {1..80})\n'"
+
+	find $directory -maxdepth 1 -type d \( ! -name $directory \) -exec bash -c "$cmd" \;
+}
+
 function mcd() {
 		mkdir -p "$1" && cd "$1"
 }
