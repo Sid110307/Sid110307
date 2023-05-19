@@ -150,3 +150,5 @@ fi
 
 export ANDROID_HOME=$HOME/Android/Sdk
 
+[ -f $HOME/.config/yarn/global/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash ] && . $HOME/.config/yarn/global/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash
+

@@ -5,7 +5,7 @@ function init-project-c() {
     touch src/main.c
 
     echo -e "#include <stdio.h>\n\nint main()\n{\n\treturn EXIT_SUCCESS;\n}" >src/main.c
-    echo -e "CC=clang\nEXECUTABLE_DIR=bin\n\nCFLAGS=-std=c11 -Wall -Wextra\nLIBS=\n\nOBJECTS=\$(patsubst %.c,%.o,\$(wildcard src/*.c))\n\n<$(basename "$PWD")>: \$(OBJECTS)\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -o \$(EXECUTABLE_DIR)/\$@ \$^ \$(LIBS)\n\tsudo .\$(EXECUTABLE_DIR)/\$@\n\nclean:\n\trm -rf \$(EXECUTABLE_DIR)\n\trm -rf \$(OBJECTS)" >Makefile
+    echo -e "CC=clang\nEXECUTABLE_DIR=bin\n\nCFLAGS=-std=c11 -Wall -Wextra\nLIBS=\n\nOBJECTS=\$(patsubst src/%.c,bin/%.o,\$(wildcard src/*.c))\n\n.PHONY: all\nall: $(basename "$PWD")\n\nbin/%.o: src/%.c\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -c -o \$@ $<\n\n$(basename "$PWD"): \$(OBJECTS)\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -o \$(EXECUTABLE_DIR)/\$@ \$^ \$(LIBS)\n\tsudo ./$(EXECUTABLE_DIR)/\$@\n\nclean:\n\trm -rf \$(EXECUTABLE_DIR)\n\trm -rf \$(OBJECTS)" >Makefile
     echo -e "# $(basename "$PWD")\n" >README.md
 }
 

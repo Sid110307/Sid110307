@@ -40,7 +40,7 @@ function mcd() {
 }
 
 function update-discord() {
-    if [ ! -f /home/sid/Downloads/discord-*.tar.gz ]; then
+    if [ ! -f /home/sid/Downloads/discord-latest.tar.gz ]; then
 		echo -n "File not found. Downloading... "
 		wget -qO "/home/sid/Downloads/discord-latest.tar.gz" "https://discord.com/api/download?platform=linux&format=tar.gz"
 		echo "Done."
