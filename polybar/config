@@ -29,6 +29,7 @@ separator = |
 separator-foreground = ${colors.secondary}
 font-0 = SF Mono:size=10;2
 font-1 = FontAwesome:size=10;2
+font-2 = Noto Sans Mono:size=10;2
 cursor-click = pointer
 cursor-scroll = pointer
 enable-ipc = true
