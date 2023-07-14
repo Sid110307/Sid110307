@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias rm-trash='echo -n "Emptying Trash... "; command rm -rf /home/sid/.local/share/Trash/**; echo -e "\033[0;32mDone.\033[0m"'
+alias rm-trash='echo -n "Emptying Trash... "; command rm -rf "/home/sid/.local/share/Trash/**"; echo -e "\033[0;32mDone.\033[0m"'
 alias rm='trash'
 alias tree='tree -aI "**/.git|**/.idea|**/.node\_modules"'
 
