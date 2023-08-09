@@ -2,7 +2,7 @@
 
 alias rm-trash='echo -n "Emptying Trash... "; command rm -rf "/home/sid/.local/share/Trash/**"; echo -e "\033[0;32mDone.\033[0m"'
 alias rm='trash'
-alias tree='tree -aI "**/.git|**/.idea|**/.node\_modules"'
+alias tree='tree -aI '"'"'**/.git|**/.idea|**/.node\_modules'"'"''
 
 alias py=$($HOME/.pyenv/bin/pyenv which python3)
 alias pip=$($HOME/.pyenv/bin/pyenv which pip)
@@ -36,7 +36,7 @@ function git-pull-all() {
 }
 
 function mcd() {
-		mkdir -p "$1" && cd "$1"
+    mkdir -p "$1" && cd "$1"
 }
 
 function update-discord() {

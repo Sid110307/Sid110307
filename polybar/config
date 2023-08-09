@@ -41,7 +41,6 @@ modules-right = volume temperature iface disk memory date mediaplayer openvpn
 tray-position = right
 tray-detached = true
 tray-offset-x = -8
-wm-restack = i3
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -89,9 +88,9 @@ type = internal/fs
 interval = 10
 warn-percentage = 75
 mount-0 = /home
-label-mounted = %{F#F0C674}: %{F#C5C8C6}%used% (%{F#F0C674}%percentage_used%%%{F#C5C8C6}) used
-label-warn = %{F#F0C674}: %{F#C5C8C6}%used% (%{F#F0C674}%percentage_used%%%{F#C5C8C6}) used
-label-unmounted = %{F#F0C674}: %{F#C5C8C6}%mountpoint% not mounted
+label-mounted = %{A1:open ~:}%{F#F0C674}: %{F#C5C8C6}%used% (%{F#F0C674}%percentage_used%%%{F#C5C8C6}) used%{A}
+label-warn = %{A1:open ~:}%{F#F0C674}: %{F#C5C8C6}%used% (%{F#F0C674}%percentage_used%%%{F#C5C8C6}) used%{A}
+label-unmounted = %{A1:open ~:}%{F#F0C674}: %{F#C5C8C6}%mountpoint% not mounted%{A}
 label-mounted-underline = ${colors.primary}
 label-warn-underline = ${colors.alert}
 label-unmounted-underline = ${colors.secondary}
