@@ -149,4 +149,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export ANDROID_HOME=$HOME/Android/Sdk
+[ -s "/etc/profile.d/devkit-env.sh" ] && \. "/etc/profile.d/devkit-env.sh"
 

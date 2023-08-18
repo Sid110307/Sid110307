@@ -13,6 +13,7 @@ vim.opt.termguicolors = true
 require('packer').startup(function(use)
   use 'github/copilot.vim'
   use 'mhartington/formatter.nvim'
+  use 'andweeb/presence.nvim'
 
   -- Custom Plugins
   use '~/.config/syntax/vim-qas'
