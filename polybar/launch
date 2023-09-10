@@ -3,5 +3,5 @@
 polybar-msg cmd quit
 MONITOR=$(polybar --list-monitors | cut -d ":" -f1)
 polybar status-bar 2>&1 | tee /tmp/polybar.log & disown
-echo "Bars launched."
+echo "Bar launched."
 

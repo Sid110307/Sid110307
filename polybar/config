@@ -37,10 +37,10 @@ bottom = true
 monitor = ${env:MONITOR:}
 # TODO: download_speed = ${env:DOWNSPEED:}
 modules-left = xworkspaces xwindow
-modules-right = volume temperature iface disk memory date mediaplayer openvpn
+modules-right = volume temperature iface disk memory date mediaplayer
 tray-position = right
 tray-detached = true
-tray-offset-x = -8
+tray-offset-x = -10
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -107,7 +107,7 @@ label-warn-underline = ${colors.alert}
 type = internal/date
 interval = 1
 date = %{F#F0C674}%a %{F#C5C8C6}%d-%m-%Y %{F#F0C674}%I:%M %p
-label = %date%
+label = %{A1:gnome-calendar :}%date%%{A}
 label-underline = ${colors.primary}
 
 [module/mediaplayer]
@@ -120,19 +120,12 @@ click-middle = ~/.config/polybar/scripts/spotify.sh --prev
 interval = 1
 label-underline = ${colors.primary}
 
-[module/openvpn]
-type = custom/script
-exec = ~/.config/polybar/scripts/openvpn.sh
-tail = true
-click-left = ~/.config/polybar/scripts/openvpn.sh --toggle
-interval = 1
-
 [network-base]
 type = internal/network
 interface = enp3s0
 interval = 5
 label-connected = <label-connected>
-label-disconnected = %{F#F0C674}Internet:%{F#707880} %{F#A54242}down
+label-disconnected = %{F#F0C674}:%{F#707880} %{F#A54242}down
 label-connected-underline = ${colors.primary}
 label-disconnected-underline = ${colors.alert}
 
