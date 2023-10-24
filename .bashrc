@@ -133,10 +133,6 @@ export NVM_DIR="/home/sid/.nvm"
 # use LTS version of Node JS
 [ -f "/home/sid/.yarn/bin/nvm" ] && nvm use --lts >>/dev/null
 
-# add custom scripts
-export PATH="/home/sid/custom:$PATH"
-export PATH="/home/sid/custom/sowon:$PATH"
-
 # add quarklang vm to PATH
 export PATH="/usr/local/quark:$PATH"
 
@@ -150,4 +146,8 @@ fi
 
 export ANDROID_HOME=$HOME/Android/Sdk
 [ -s "/etc/profile.d/devkit-env.sh" ] && \. "/etc/profile.d/devkit-env.sh"
+
+# bat and fzf
+export BAT_THEME="ansi-dark"
+export FZF_DEFAULT_COMMAND="rg --hidden --no-ignore -l \"\""
 

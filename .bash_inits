@@ -5,7 +5,7 @@ function init-project-c() {
     touch src/main.c
 
     echo -e "#include <stdio.h>\n\nint main()\n{\n\treturn EXIT_SUCCESS;\n}" >src/main.c
-    echo -e "CC=clang\nEXECUTABLE_DIR=bin\n\nCFLAGS=-std=c11 -Wall -Wextra\nLIBS=\n\nOBJECTS=\$(patsubst src/%.c,bin/%.o,\$(wildcard src/*.c))\n\n.PHONY: all\nall: $(basename "$PWD")\n\nbin/%.o: src/%.c\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -c -o \$@ $<\n\n$(basename "$PWD"): \$(OBJECTS)\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -o \$(EXECUTABLE_DIR)/\$@ \$^ \$(LIBS)\n\tsudo ./$(EXECUTABLE_DIR)/\$@\n\nclean:\n\trm -rf \$(EXECUTABLE_DIR)\n\trm -rf \$(OBJECTS)" >Makefile
+    echo -e "CC=clang\nEXECUTABLE_DIR=bin\n\nCFLAGS=-std=c11 -Wall -Wextra\nLIBS=\n\nOBJECTS=\$(patsubst src/%.c,bin/%.o,\$(wildcard src/*.c))\n\n.PHONY: all\nall: $(basename "$PWD")\n\nbin/%.o: src/%.c\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -c -o \$@ $<\n\n$(basename "$PWD"): \$(OBJECTS)\n\tmkdir -p \$(EXECUTABLE_DIR)\n\t\$(CC) \$(CFLAGS) -o \$(EXECUTABLE_DIR)/\$@ \$^ \$(LIBS)\n\tsudo ./\$(EXECUTABLE_DIR)/\$@\n\nclean:\n\trm -rf \$(EXECUTABLE_DIR) \$(OBJECTS)" >Makefile
     echo -e "# $(basename "$PWD")\n" >README.md
 }
 
@@ -14,7 +14,7 @@ function init-project-cpp() {
     touch src/main.cpp
 
     echo -e "#include <iostream>\n\nint main()\n{\n\treturn EXIT_SUCCESS;\n}" >src/main.cpp
-    echo -e "cmake_minimum_required(VERSION 3.2)\nproject($(basename "$PWD"))\n\nset(CMAKE_CXX_STANDARD 20)\nset(CMAKE_CXX_FLAGS \"-Wall -Wextra\")\n\nset(CMAKE_RUNTIME_OUTPUT_DIRECTORY \${CMAKE_BINARY_DIR})\nset(PROJECT_SOURCE_DIR \${CMAKE_CURRENT_SOURCE_DIR}/src)\n\nadd_executable($(basename "$PWD") \${PROJECT_SOURCE_DIR}/main.cpp)" >CMakeLists.txt
+    echo -e "cmake_minimum_required(VERSION 3.20)\nproject($(basename "$PWD"))\n\nset(CMAKE_CXX_STANDARD 20)\nset(CMAKE_CXX_FLAGS \"-Wall -Wextra\")\n\nset(CMAKE_RUNTIME_OUTPUT_DIRECTORY \${CMAKE_BINARY_DIR})\nset(PROJECT_SOURCE_DIR \${CMAKE_CURRENT_SOURCE_DIR}/src)\n\nadd_executable($(basename "$PWD") \${PROJECT_SOURCE_DIR}/main.cpp)" >CMakeLists.txt
     echo -e "# $(basename "$PWD")\n" >README.md
 }
 
@@ -25,4 +25,3 @@ function init-project-py() {
     echo -e "# $(basename "$PWD")\n" >README.md
     echo -e "#!/usr/bin/env python3\n\nif __name__ == \"__main__\":\n\tprint(\"Hello World!\")" >src/main.py
 }
-
