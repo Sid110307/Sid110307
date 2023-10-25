@@ -54,7 +54,6 @@ label-empty-padding = 1
 [module/xwindow]
 type = internal/xwindow
 label = %{F#A54242} %{F-}%title:0:55:...%
-label-maxlen = 47
 
 [module/volume]
 type = internal/pulseaudio
