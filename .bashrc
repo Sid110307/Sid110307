@@ -148,6 +148,6 @@ export ANDROID_HOME=$HOME/Android/Sdk
 [ -s "/etc/profile.d/devkit-env.sh" ] && \. "/etc/profile.d/devkit-env.sh"
 
 # bat and fzf
-export BAT_THEME="ansi-dark"
+export BAT_THEME="OneHalfDark"
 export FZF_DEFAULT_COMMAND="rg --hidden --no-ignore -l \"\""
 
