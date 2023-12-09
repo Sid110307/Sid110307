@@ -2,7 +2,7 @@
 
 alias rm-trash='echo -n "Emptying Trash... " && sudo rm -rf "/home/sid/.local/share/Trash/**" && echo -e "\033[0;32mDone.\033[0m"'
 alias rm='trash'
-alias tree='tree -aI '"'"'.git|.idea|.node\_modules'"'"''
+alias tree='tree -aI ".git|.idea|.node_modules"'
 
 alias py=$($HOME/.pyenv/bin/pyenv which python3)
 alias pip=$($HOME/.pyenv/bin/pyenv which pip)
