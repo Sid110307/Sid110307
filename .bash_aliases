@@ -20,6 +20,7 @@ alias firefox='/opt/firefox/firefox'
 alias powershell='pwsh'
 alias init-chroot='source /etc/profile; source /home/sid/.bashrc; export PS1="(chroot) $PS1"'
 
+alias sync-pc='git-pull-all Desktop && full-update && cd /home/sid/Desktop/Android/Projects && git-pull-all && cd'
 alias pyenv-install-latest='pyenv install $(pyenv install --list | grep -v - | grep -v b | grep -v a | tail -1)'
 alias full-update='sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && [ $(command -v snap) ] && sudo snap refresh'
 alias pip-upgrade-all='pip list --outdated --format=freeze | grep -v '"'"'^\-e'"'"' | cut -d = -f 1  | xargs -n1 pip install -U'
@@ -33,7 +34,7 @@ function git-status-all() {
 
 function git-pull-all() {
 	directory=$(if test -z "$1"; then echo "."; else echo "$1"; fi)
-	cmd="cd '{}' && pwd && git pull; echo -e '\n$(printf '=%.0s' {1..80})\n'"
+	cmd="cd '{}' && pwd && git pull --recurse-submodules; echo -e '\n$(printf '=%.0s' {1..80})\n'"
 
 	find $directory -maxdepth 1 -type d \( ! -name $directory \) -exec bash -c "$cmd" \;
 }
