@@ -20,7 +20,7 @@ alias firefox='/opt/firefox/firefox'
 alias powershell='pwsh'
 alias init-chroot='source /etc/profile; source /home/sid/.bashrc; export PS1="(chroot) $PS1"'
 
-alias sync-pc='git-pull-all Desktop && full-update && cd /home/sid/Desktop/Android/Projects && git-pull-all && cd'
+alias sync-pc='git-pull-all Desktop && full-update && pushd /home/sid/Desktop/Android/Projects && git-pull-all && popd'
 alias pyenv-install-latest='pyenv install $(pyenv install --list | grep -v - | grep -v b | grep -v a | tail -1)'
 alias full-update='sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && [ $(command -v snap) ] && sudo snap refresh'
 alias pip-upgrade-all='pip list --outdated --format=freeze | grep -v '"'"'^\-e'"'"' | cut -d = -f 1  | xargs -n1 pip install -U'
