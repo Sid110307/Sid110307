@@ -9,7 +9,7 @@ alias pip=$($HOME/.pyenv/bin/pyenv which pip)
 
 alias fun-date='while true; do echo "$(date "+%d/%m/%Y %T" | toilet -f term -F border --gay)"; sleep 1; printf "\033[F\033[F\033[F"; done'
 alias ccat='batcat'
-alias rg='batgrep'
+alias rg='batgrep --hidden'
 alias man='batman'
 alias diff='batdiff'
 alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
@@ -20,7 +20,7 @@ alias firefox='/opt/firefox/firefox'
 alias powershell='pwsh'
 alias init-chroot='source /etc/profile; source /home/sid/.bashrc; export PS1="(chroot) $PS1"'
 
-alias sync-pc='git-pull-all Desktop --home && full-update && pushd /home/sid/Desktop/Android/Projects && git-pull-all && popd'
+alias sync-pc='git-pull-all Desktop --home && full-update && pushd /home/sid/Desktop/Android && git-pull-all && popd'
 alias pyenv-install-latest='pyenv install $(pyenv install --list | grep -v - | grep -v b | grep -v a | tail -1)'
 alias full-update='sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && [ $(command -v snap) ] && sudo snap refresh'
 alias pip-upgrade-all='pip list --outdated --format=freeze | grep -v '"'"'^\-e'"'"' | cut -d = -f 1  | xargs -n1 pip install -U'
