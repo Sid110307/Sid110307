@@ -26,7 +26,7 @@ alias full-update='sudo apt update -y && sudo apt full-upgrade -y && sudo apt au
 alias pip-upgrade-all='pip list --outdated --format=freeze | grep -v '"'"'^\-e'"'"' | cut -d = -f 1  | xargs -n1 pip install -U'
 
 function git-status-all() {
-    [ "$1" == "--home" ] && cd /home/sid
+    [ "$1" == "--home" ] && pushd /home/sid
 
 	directory=$(if test -z "$1"; then echo "."; else echo "$1"; fi)
 	cmd="cd '{}' && pwd && git status -s -uno; echo -e '\n$(printf '=%.0s' {1..80})\n'"
@@ -35,7 +35,7 @@ function git-status-all() {
 }
 
 function git-pull-all() {
-    [ "$1" == "--home" ] && cd /home/sid
+    [ "$1" == "--home" ] && pushd /home/sid
 
 	directory=$(if test -z "$1"; then echo "."; else echo "$1"; fi)
 	cmd="cd '{}' && pwd && git pull --recurse-submodules; echo -e '\n$(printf '=%.0s' {1..80})\n'"
