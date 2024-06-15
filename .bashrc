@@ -61,6 +61,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 command -v pyenv 1>/dev/null 2>&1 && eval "$(pyenv init -)"
 
 export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
 [ -s "/etc/profile.d/devkit-env.sh" ] && \. "/etc/profile.d/devkit-env.sh"
 
 export BAT_THEME="OneHalfDark"

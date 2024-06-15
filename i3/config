@@ -6,7 +6,6 @@ font pango:FontAwesome, System San Francisco Display 10
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id feh --bg-scale /home/sid/Documents/calvin-and-hobbes.png
 exec_always --no-startup-id picom-bc
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id Discord --start-minimized
 exec --no-startup-id dunst -conf /home/sid/.config/dunst/dunstrc
