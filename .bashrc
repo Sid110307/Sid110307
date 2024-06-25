@@ -65,5 +65,6 @@ export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-
 [ -s "/etc/profile.d/devkit-env.sh" ] && \. "/etc/profile.d/devkit-env.sh"
 
 export BAT_THEME="OneHalfDark"
+export PATH="/opt/nvim/bin:$PATH"
 export FZF_DEFAULT_COMMAND="rg --hidden --no-ignore -l \"\""
 
