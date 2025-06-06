@@ -1,0 +1,8 @@
+main:
+  - title: "About Me"
+    url: "/"
+    children:
+      - title: "Selected Projects"
+        url: "/projects/"
+      - title: "Skills & Experience"
+        url: "/experience/"

@@ -1,0 +1,52 @@
+title: Sid110307
+url: "https://sid110307.github.io"
+baseurl: "/Sid110307"
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+github: [metadata]
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-simple-icons
+google_site_verification: "4GuCcJQhlsmrDinyVqD3GJNlK-0CgE6ZL334w8HxPuU"
+minimal_mistakes_skin: "air"
+sass:
+  style: compressed
+defaults:
+  - scope:
+      path: ""
+    values:
+      sidebar:
+        nav: "main"
+author:
+  name: Siddharth Praveen Bharadwaj
+  username: Sid110307
+  email: siddharthpb2007@gmail.com
+  bio: Programmer passionate about embedded systems, OS, AI/ML, game dev, graphics, and more.
+  links:
+    - label: LinkedIn
+      icon: fab fa-linkedin
+      url: https://linkedin.com/in/sid110307
+    - label: GitHub
+      icon: fab fa-github
+      url: https://github.com/Sid110307
+    - label: Twitter
+      icon: fab fa-x-twitter
+      url: https://x.com/CoolorFoolSRS
+    - label: Reddit
+      icon: fab fa-reddit
+      url: https://reddit.com/u/CoolorFoolSRS
+    - label: DEV Community
+      icon: fab fa-dev
+      url: https://dev.to/@sid110307
+    - label: Stack Overflow
+      icon: fab fa-stack-overflow
+      url: https://stackoverflow.com/users/13852870
+    - label: Discord
+      icon: fab fa-discord
+      url: https://discord.com/users/sid110307
+    - label: Instagram
+      icon: fab fa-instagram
+      url: https://www.instagram.com/sid.110307

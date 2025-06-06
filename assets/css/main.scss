@@ -1,0 +1,93 @@
+---
+---
+
+@import "minimal-mistakes/skins/air";
+@import "minimal-mistakes";
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #DDDDDD;
+    margin: 2rem 0;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.page-header {
+    h1 {
+        display: none;
+    }
+}
+
+.site-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 1.5rem 0;
+}
+
+footer, .footer, .site-footer {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.skill-card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: default;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-color: #D0D0D0;
+    }
+
+    i, img {
+        font-size: 2em;
+        margin-bottom: 12px;
+        color: #555555;
+    }
+}
+
+.skill-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222222;
+}
