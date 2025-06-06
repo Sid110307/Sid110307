@@ -44,7 +44,7 @@ author_profile: true
     </div>
     <div class="skill-card">
        <i class="fas fa-fw fa-code"></i>
-        <div class="skill-title">x86 Assembly (basics)</div>
+        <div class="skill-title">x86 Assembly (basic)</div>
     </div>
     <div class="skill-card">
         {% simpleicons markdown %}
@@ -76,8 +76,16 @@ author_profile: true
         <div class="skill-title">Linear</div>
     </div>
     <div class="skill-card">
+        {% simpleicons trello %}
+        <div class="skill-title">Trello</div>
+    </div>
+    <div class="skill-card">
         <i class="fas fa-fw fa-code"></i>
         <div class="skill-title">VS Code</div>
+    </div>
+    <div class="skill-card">
+        <i class="fas fa-fw fa-code"></i>
+        <div class="skill-title">Visual Studio</div>
     </div>
     <div class="skill-card">
         {% simpleicons jetbrains %}
@@ -150,11 +158,11 @@ author_profile: true
     </div>
     <div class="skill-card">
         {% simpleicons vuedotjs %}
-        <div class="skill-title">Vue (basics)</div>
+        <div class="skill-title">Vue (basic)</div>
     </div>
     <div class="skill-card">
         {% simpleicons angular %}
-        <div class="skill-title">Angular (basics)</div>
+        <div class="skill-title">Angular (basic)</div>
     </div>
     <div class="skill-card">
         <i class="fas fa-fw fa-window-maximize"></i>
@@ -183,11 +191,7 @@ author_profile: true
     </div>
     <div class="skill-card">
         {% simpleicons apollographql %}
-        <div class="skill-title">Apollo</div>
-    </div>
- <div class="skill-card">
-        {% simpleicons graphql %}
-        <div class="skill-title">GraphQL</div>
+        <div class="skill-title">Apollo GraphQL</div>
     </div>
     <div class="skill-card">
         {% simpleicons prisma %}
@@ -249,11 +253,11 @@ author_profile: true
     </div>
     <div class="skill-card">
         {% simpleicons pandas %}
-        <div class="skill-title">pandas</div>
+        <div class="skill-title">Pandas</div>
     </div>
     <div class="skill-card">
         <i class="fas fa-fw fa-chart-simple"></i>
-        <div class="skill-title">matplotlib</div>
+        <div class="skill-title">Matplotlib</div>
     </div>
     <div class="skill-card">
         {% simpleicons tensorflow %}
@@ -320,7 +324,7 @@ author_profile: true
 <div class="skill-grid">
     <div class="skill-card">
         {% simpleicons linux %}
-        <div class="skill-title">Linux</div>
+        <div class="skill-title">Linux (Debian-based)</div>
     </div>
     <div class="skill-card">
         <i class="fab fa-fw fa-windows"></i>
@@ -331,8 +335,12 @@ author_profile: true
         <div class="skill-title">Android</div>
     </div>
     <div class="skill-card">
+        {% simpleicons macos %}
+        <div class="skill-title">macOS</div>
+    </div>
+    <div class="skill-card">
         {% simpleicons ios %}
-        <div class="skill-title">iOS (basic Swift)</div>
+        <div class="skill-title">iOS (basic)</div>
     </div>
     <div class="skill-card">
         {% simpleicons raspberrypi %}
@@ -390,7 +398,7 @@ author_profile: true
     </div>
     <div class="skill-card">
         <i class="fas fa-fw fa-hexagon-nodes"></i>
-        <div class="skill-title">nmap (basic)</div>
+        <div class="skill-title">Nmap (basic)</div>
     </div>
     <div class="skill-card">
         <i class="fas fa-fw fa-shield-halved"></i>
@@ -427,7 +435,8 @@ author_profile: true
 *Mar 2022 – Present (ongoing)*
 
 - Led backend and frontend development across multiple products with full-stack integration.
-- Designed mobile apps using React Native with Node.js and PostgreSQL backend and implemented CI/CD.
+- Designed mobile apps using React Native with Node.js and PostgreSQL backend, using Supabase for authentication and database management.
+- Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform (GCP) infrastructure.
 - Built real-time systems using WebSockets and REST APIs.
 
 ### Research Intern
@@ -435,9 +444,9 @@ author_profile: true
 **Interdisciplinary Centre for Energy Research (ICER), Indian Institute of Science**  
 *Apr 2023 – Oct 2024 (completed)*
 
-- Designed CAD models for microfluidic sensors used for sensing particular substances.
+- Designed CAD models for microfluidic sensors used to detect specific substances.
 - Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.
-- Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries for monitoring data.
+- Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Plotly.js for monitoring data.
 
 ---
 
