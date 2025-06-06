@@ -47,16 +47,16 @@ author_profile: true
         <div class="skill-title">x86 Assembly (basic)</div>
     </div>
     <div class="skill-card">
-        {% simpleicons markdown %}
-        <div class="skill-title">Markdown</div>
-    </div>
-    <div class="skill-card">
         {% simpleicons json %}
         <div class="skill-title">JSON</div>
     </div>
     <div class="skill-card">
         {% simpleicons yaml %}
         <div class="skill-title">YAML</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons markdown %}
+        <div class="skill-title">Markdown</div>
     </div>
 </div>
 
@@ -99,7 +99,7 @@ author_profile: true
         {% simpleicons gnu %}
         <div class="skill-title">Make</div>
     </div>
- <div class="skill-card">
+    <div class="skill-card">
         {% simpleicons cmake %}
         <div class="skill-title">CMake</div>
     </div>
@@ -116,6 +116,10 @@ author_profile: true
         <div class="skill-title">CLI tools</div>
     </div>
     <div class="skill-card">
+        <i class="fas fa-fw fa-project-diagram"></i>
+        <div class="skill-title">GraphViz</div>
+    </div>
+    <div class="skill-card">
         {% simpleicons figma %}
         <div class="skill-title">Figma</div>
     </div>
@@ -127,9 +131,42 @@ author_profile: true
         {% simpleicons blender %}
         <div class="skill-title">Blender</div>
     </div>
+</div>
+
+### Backend
+
+<div class="skill-grid">
     <div class="skill-card">
-        <i class="fas fa-fw fa-project-diagram"></i>
-        <div class="skill-title">GraphViz</div>
+        {% simpleicons express %}
+        <div class="skill-title">Express</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons flask %}
+        <div class="skill-title">Flask (basic)</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons apollographql %}
+        <div class="skill-title">Apollo GraphQL</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons prisma %}
+        <div class="skill-title">Prisma</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons mysql %}
+        <div class="skill-title">MySQL</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons postgresql %}
+        <div class="skill-title">PostgreSQL</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons sqlite %}
+        <div class="skill-title">SQLite</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons supabase %}
+        <div class="skill-title">Supabase</div>
     </div>
 </div>
 
@@ -157,6 +194,10 @@ author_profile: true
         <div class="skill-title">Expo</div>
     </div>
     <div class="skill-card">
+        {% simpleicons android %}
+        <div class="skill-title">Android SDK</div>
+    </div>
+    <div class="skill-card">
         {% simpleicons vuedotjs %}
         <div class="skill-title">Vue (basic)</div>
     </div>
@@ -171,47 +212,6 @@ author_profile: true
     <div class="skill-card">
         <i class="fas fa-fw fa-desktop"></i>
         <div class="skill-title">SDL2</div>
-    </div>
-    <div class="skill-card">
-        {% simpleicons android %}
-        <div class="skill-title">Android SDK</div>
-    </div>
-</div>
-
-### Backend
-
-<div class="skill-grid">
-    <div class="skill-card">
-        {% simpleicons express %}
-        <div class="skill-title">Express</div>
-    </div>
-    <div class="skill-card">
-        {% simpleicons flask %}
-        <div class="skill-title">Flask (basic)</div>
-    </div>
-    <div class="skill-card">
-        {% simpleicons apollographql %}
-        <div class="skill-title">Apollo GraphQL</div>
-    </div>
-    <div class="skill-card">
-        {% simpleicons prisma %}
-        <div class="skill-title">Prisma</div>
-    </div>
- <div class="skill-card">
-        {% simpleicons supabase %}
-        <div class="skill-title">Supabase</div>
-    </div>
-    <div class="skill-card">
-        {% simpleicons mysql %}
-        <div class="skill-title">MySQL</div>
-    </div>
- <div class="skill-card">
-        {% simpleicons postgresql %}
-        <div class="skill-title">PostgreSQL</div>
-    </div>
- <div class="skill-card">
-        {% simpleicons sqlite %}
-        <div class="skill-title">SQLite</div>
     </div>
 </div>
 
@@ -240,7 +240,7 @@ author_profile: true
     </div>
 </div>
 
-### AI / Machine Learning
+### Artificial Intelligence & Machine Learning
 
 <div class="skill-grid">
     <div class="skill-card">
@@ -266,6 +266,27 @@ author_profile: true
     <div class="skill-card">
         {% simpleicons openai %}
         <div class="skill-title">OpenAI API</div>
+    </div>
+</div>
+
+### DevOps
+
+<div class="skill-grid">
+    <div class="skill-card">
+        {% simpleicons githubactions %}
+        <div class="skill-title">GitHub Actions</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons expo %}
+        <div class="skill-title">EAS (Expo)</div>
+    </div>
+    <div class="skill-card">
+        <i class="fas fa-fw fa-gear"></i>
+        <div class="skill-title">systemd</div>
+    </div>
+    <div class="skill-card">
+        <i class="fas fa-fw fa-calendar-alt"></i>
+        <div class="skill-title">cron (basic)</div>
     </div>
 </div>
 
@@ -295,27 +316,6 @@ author_profile: true
     <div class="skill-card">
         <i class="fas fa-fw fa-plug-circle-bolt"></i>
         <div class="skill-title">GPIO</div>
-    </div>
-</div>
-
-### DevOps
-
-<div class="skill-grid">
-    <div class="skill-card">
-        {% simpleicons githubactions %}
-        <div class="skill-title">GitHub Actions</div>
-    </div>
-    <div class="skill-card">
-        {% simpleicons expo %}
-        <div class="skill-title">EAS (Expo)</div>
-    </div>
-    <div class="skill-card">
-        <i class="fas fa-fw fa-gear"></i>
-        <div class="skill-title">systemd</div>
-    </div>
-    <div class="skill-card">
-        <i class="fas fa-fw fa-calendar-alt"></i>
-        <div class="skill-title">cron (basic)</div>
     </div>
 </div>
 
@@ -350,9 +350,13 @@ author_profile: true
         {% simpleicons arduino %}
         <div class="skill-title">Arduino</div>
     </div>
+    <div class="skill-card">
+        <i class="fas fa-fw fa-microchip"></i>
+        <div class="skill-title">ESP32/ESP8266</div>
+    </div>
 </div>
 
-### APIs / Protocols
+### APIs & Protocols
 
 <div class="skill-grid">
     <div class="skill-card">
@@ -372,12 +376,12 @@ author_profile: true
         <div class="skill-title">HTTP/S</div>
     </div>
     <div class="skill-card">
-        {% simpleicons bluetooth %}
-        <div class="skill-title">BLE</div>
-    </div>
-    <div class="skill-card">
         <i class="fas fa-fw fa-network-wired"></i>
         <div class="skill-title">TCP/UDP</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons bluetooth %}
+        <div class="skill-title">BLE</div>
     </div>
     <div class="skill-card">
         <i class="fas fa-fw fa-plug"></i>
