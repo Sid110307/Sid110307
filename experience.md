@@ -23,7 +23,7 @@ author_profile: true
         <div class="skill-title">C++</div>
     </div>
     <div class="skill-card">
-        <i class="fab fa-2xl fa-java"></i>
+        <i class="fab fa-fw fa-java"></i>
         <div class="skill-title">Java</div>
     </div>
     <div class="skill-card">
@@ -72,7 +72,7 @@ author_profile: true
         <div class="skill-title">Linear</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-code"></i>
+        <i class="fas fa-fw fa-code"></i>
         <div class="skill-title">VS Code</div>
     </div>
     <div class="skill-card">
@@ -100,7 +100,7 @@ author_profile: true
         <div class="skill-title">Postman</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-terminal"></i>
+        <i class="fas fa-fw fa-terminal"></i>
         <div class="skill-title">CLI tools</div>
     </div>
     <div class="skill-card">
@@ -116,7 +116,7 @@ author_profile: true
         <div class="skill-title">Blender</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-project-diagram"></i>
+        <i class="fas fa-fw fa-project-diagram"></i>
         <div class="skill-title">GraphViz</div>
     </div>
 </div>
@@ -127,6 +127,10 @@ author_profile: true
     <div class="skill-card">
         {% simpleicons html5 %}
         <div class="skill-title">HTML/CSS</div>
+    </div>
+    <div class="skill-card">
+        {% simpleicons nodedotjs %}
+        <div class="skill-title">Node.js</div>
     </div>
     <div class="skill-card">
         {% simpleicons react %}
@@ -149,11 +153,11 @@ author_profile: true
         <div class="skill-title">Angular (basics)</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-window-maximize"></i>
+        <i class="fas fa-fw fa-window-maximize"></i>
         <div class="skill-title">ImGui</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-desktop"></i>
+        <i class="fas fa-fw fa-desktop"></i>
         <div class="skill-title">SDL2</div>
     </div>
     <div class="skill-card">
@@ -211,15 +215,15 @@ author_profile: true
         <div class="skill-title">OpenGL</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-bullseye"></i>
+        <i class="fas fa-fw fa-bullseye"></i>
         <div class="skill-title">Raycasting</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-image"></i>
+        <i class="fas fa-fw fa-image"></i>
         <div class="skill-title">Framebuffer</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-cube"></i>
+        <i class="fas fa-fw fa-cube"></i>
         <div class="skill-title">Ursina Engine (basic)</div>
     </div>
     <div class="skill-card">
@@ -244,7 +248,7 @@ author_profile: true
         <div class="skill-title">pandas</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-chart-simple"></i>
+        <i class="fas fa-fw fa-chart-simple"></i>
         <div class="skill-title">matplotlib</div>
     </div>
     <div class="skill-card">
@@ -261,27 +265,27 @@ author_profile: true
 
 <div class="skill-grid">
     <div class="skill-card">
-        <i class="fas fa-2xl fa-microchip"></i>
+        <i class="fas fa-fw fa-microchip"></i>
         <div class="skill-title">UEFI</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-server"></i>
+        <i class="fas fa-fw fa-server"></i>
         <div class="skill-title">Bootloaders</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-memory"></i>
+        <i class="fas fa-fw fa-memory"></i>
         <div class="skill-title">Memory management</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-code-branch"></i>
+        <i class="fas fa-fw fa-code-branch"></i>
         <div class="skill-title">Threading</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-gears"></i>
+        <i class="fas fa-fw fa-gears"></i>
         <div class="skill-title">Syscalls</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-plug-circle-bolt"></i>
+        <i class="fas fa-fw fa-plug-circle-bolt"></i>
         <div class="skill-title">GPIO</div>
     </div>
 </div>
@@ -298,11 +302,11 @@ author_profile: true
         <div class="skill-title">EAS (Expo)</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-gear"></i>
+        <i class="fas fa-fw fa-gear"></i>
         <div class="skill-title">systemd</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-calendar-alt"></i>
+        <i class="fas fa-fw fa-calendar-alt"></i>
         <div class="skill-title">cron (basic)</div>
     </div>
 </div>
@@ -315,7 +319,7 @@ author_profile: true
         <div class="skill-title">Linux</div>
     </div>
     <div class="skill-card">
-        <i class="fab fa-2xl fa-windows"></i>
+        <i class="fab fa-fw fa-windows"></i>
         <div class="skill-title">Windows</div>
     </div>
     <div class="skill-card">
@@ -340,7 +344,7 @@ author_profile: true
 
 <div class="skill-grid">
     <div class="skill-card">
-        <i class="fas fa-2xl fa-cloud"></i>
+        <i class="fas fa-fw fa-cloud"></i>
         <div class="skill-title">REST</div>
     </div>
     <div class="skill-card">
@@ -348,11 +352,11 @@ author_profile: true
         <div class="skill-title">GraphQL</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-right-left"></i>
+        <i class="fas fa-fw fa-right-left"></i>
         <div class="skill-title">WebSockets</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-network-wired"></i>
+        <i class="fas fa-fw fa-network-wired"></i>
         <div class="skill-title">HTTP/S</div>
     </div>
     <div class="skill-card">
@@ -364,7 +368,7 @@ author_profile: true
         <div class="skill-title">BLE</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-plug"></i>
+        <i class="fas fa-fw fa-plug"></i>
         <div class="skill-title">UART</div>
     </div>
 </div>
@@ -381,11 +385,11 @@ author_profile: true
         <div class="skill-title">Wireshark (basic)</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-hexagon-nodes"></i>
+        <i class="fas fa-fw fa-hexagon-nodes"></i>
         <div class="skill-title">nmap (basic)</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-shield-halved"></i>
+        <i class="fas fa-fw fa-shield-halved"></i>
         <div class="skill-title">Request interception</div>
     </div>
 </div>
@@ -394,19 +398,19 @@ author_profile: true
 
 <div class="skill-grid">
     <div class="skill-card">
-        <i class="fas fa-2xl fa-square-binary"></i>
+        <i class="fas fa-fw fa-square-binary"></i>
         <div class="skill-title">Language design</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-code"></i>
+        <i class="fas fa-fw fa-code"></i>
         <div class="skill-title">Interpreters</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-table-columns"></i>
+        <i class="fas fa-fw fa-table-columns"></i>
         <div class="skill-title">Tokenization</div>
     </div>
     <div class="skill-card">
-        <i class="fas fa-2xl fa-file-code"></i>
+        <i class="fas fa-fw fa-file-code"></i>
         <div class="skill-title">Bytecode emulation</div>
     </div>
 </div>
