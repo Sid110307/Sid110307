@@ -28,10 +28,10 @@ A few of my open-source projects across my focus areas:
 
 *(Code not public due to organization or other constraints - happy to discuss details!)*
 
-- **TreeMap** - Geospatial tree mapping tool for environmental research with on-device AI and offline-first support
-- **PVDashboard** - Real-time photovoltaic monitoring dashboard for PV reliability test bed
-- **Attendifier** - Face recognition-based attendance management system
-- **Earther** - Android app for voltage + GPS data logging with graph visualization and CSV export
+- [TreeMap](https://github.com/Sid110307/TreeMap) - Geospatial tree mapping tool for environmental research with on-device AI and offline-first support
+- [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV reliability test bed
+- [Attendifier](https://github.com/Sid110307/Attendifier) - Face recognition-based attendance management system
+- [Earther](https://github.com/Sid110307/Earther) - Android app for voltage + GPS data logging with graph visualization and CSV export
 
 ---
 
