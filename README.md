@@ -2,12 +2,12 @@
 
 I'm a programmer based in India, passionate about:
 
-🚀 **Embedded systems** and low-level programming  
-🖥️ **Operating systems** and emulation  
-🤖 **AI/ML** and intelligent systems  
-🎮 **Game development** and creative computing  
-🛠️ **Custom languages**, interpreters, and compilers  
-📱 **Mobile apps** and full-stack development  
+- 🚀 **Embedded systems** and low-level programming
+- 🖥️ **Operating systems** and emulation
+- 🤖 **AI/ML** and intelligent systems
+- 🎮 **Game development** and creative computing
+- 🛠️ **Custom languages**, interpreters, and compilers
+- 📱 **Mobile apps** and full-stack development
 
 ---
 
@@ -35,16 +35,16 @@ A few of my open-source projects across my focus areas:
 
 ---
 
-## 📫 How to reach me:
+## 📫 How to reach me
 
 - [Email](mailto:siddharthpb2007@gmail.com)
+- [LinkedIn](https://linkedin.com/in/sid110307)
 - [Twitter](https://x.com/CoolorFoolSRS)
 - [Reddit](https://reddit.com/u/CoolorFoolSRS)
-- [Discord](https://discord.com/users/sid110307)
-- [Instagram](https://www.instagram.com/sid.110307)
-- [LinkedIn](https://linkedin.com/in/sid110307)
 - [DEV Community](https://dev.to/@sid110307)
 - [Stack Overflow](https://stackoverflow.com/users/13852870)
+- [Discord](https://discord.com/users/sid110307)
+- [Instagram](https://www.instagram.com/sid.110307)
 
 ---
 
