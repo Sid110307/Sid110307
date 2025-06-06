@@ -29,7 +29,7 @@ ul {
 }
 
 li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .page-header {
@@ -73,13 +73,14 @@ footer, .footer, .site-footer {
     cursor: default;
 
     &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        border-color: #D0D0D0;
+        transform: translateY(-6px) scale(1.025);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        border-color: #C0C0C0;
+        background: #F0F0F0;
     }
 
     i, img {
-        font-size: 2em !important;
+        font-size: 2.25em !important;
         margin-bottom: 12px;
         color: #555555;
         filter: brightness(0) saturate(100%) invert(34%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);

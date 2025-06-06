@@ -43,6 +43,10 @@ author_profile: true
         <div class="skill-title">Bash</div>
     </div>
     <div class="skill-card">
+       <i class="fas fa-fw fa-code"></i>
+        <div class="skill-title">x86 Assembly (basics)</div>
+    </div>
+    <div class="skill-card">
         {% simpleicons markdown %}
         <div class="skill-title">Markdown</div>
     </div>
@@ -261,7 +265,7 @@ author_profile: true
     </div>
 </div>
 
-### Embedded / OS
+### OS Development & Low-level Systems
 
 <div class="skill-grid">
     <div class="skill-card">
@@ -360,12 +364,12 @@ author_profile: true
         <div class="skill-title">HTTP/S</div>
     </div>
     <div class="skill-card">
-        {% simpleicons mqtt %}
-        <div class="skill-title">TCP/UDP</div>
-    </div>
-    <div class="skill-card">
         {% simpleicons bluetooth %}
         <div class="skill-title">BLE</div>
+    </div>
+    <div class="skill-card">
+        <i class="fas fa-fw fa-network-wired"></i>
+        <div class="skill-title">TCP/UDP</div>
     </div>
     <div class="skill-card">
         <i class="fas fa-fw fa-plug"></i>
@@ -420,7 +424,7 @@ author_profile: true
 ### Senior Software Engineer
 
 **HustleX (XElite Studios Pvt. Ltd.)**  
-*Mar 2022 – Present*
+*Mar 2022 – Present (ongoing)*
 
 - Led backend and frontend development across multiple products with full-stack integration.
 - Designed mobile apps using React Native with Node.js and PostgreSQL backend and implemented CI/CD.
@@ -429,7 +433,7 @@ author_profile: true
 ### Research Intern
 
 **Interdisciplinary Centre for Energy Research (ICER), Indian Institute of Science**  
-*Apr 2023 – Oct 2024*
+*Apr 2023 – Oct 2024 (completed)*
 
 - Designed CAD models for microfluidic sensors used for sensing particular substances.
 - Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.

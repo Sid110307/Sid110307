@@ -1,6 +1,6 @@
 # Hi there 👋 - I'm Siddharth Praveen Bharadwaj
 
-I'm a programmer based in India, passionate about:
+I'm a full-stack and systems programmer based in India, passionate about:
 
 - 🚀 **Embedded systems** and low-level programming
 - 🖥️ **Operating systems** and emulation
@@ -8,8 +8,6 @@ I'm a programmer based in India, passionate about:
 - 🎮 **Game development** and creative computing
 - 🛠️ **Custom languages**, interpreters, and compilers
 - 📱 **Mobile apps** and full-stack development
-
----
 
 ## 🗂️ Selected Public Projects
 
@@ -19,10 +17,8 @@ A few of my open-source projects across my focus areas:
 - [quarklang-vm](https://github.com/Sid110307/quarklang-vm) - Stack-based VM with bytecode, REPL, and custom debugger
 - [AxiLang](https://github.com/Sid110307/AxiLang) - A scripting language for controlling the AxiDraw plotter
 - [ShadowDoom](https://github.com/Sid110307/ShadowDoom) - Fantasy console game made with Python
-- [SoundTest](https://github.com/Sid110307/SoundTest) - C++ ImGui audio tool for generating, editing, and visualizing tones with PC speaker
+- [SoundTest](https://github.com/Sid110307/SoundTest) - C++ ImGui audio tool for generating, editing, and playing tones with internal PC speaker
 - [FBGraphics](https://github.com/Sid110307/FBGraphics) - C++ graphics engine by directly manipulating framebuffer pixels
-
----
 
 ## 🔒 A few Private/Internal Projects
 
@@ -32,8 +28,6 @@ A few of my open-source projects across my focus areas:
 - [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV reliability test bed
 - [Attendifier](https://github.com/Sid110307/Attendifier) - Face recognition-based attendance management system
 - [Earther](https://github.com/Sid110307/Earther) - Android app for voltage + GPS data logging with graph visualization and CSV export
-
----
 
 ## 📫 How to reach me
 
