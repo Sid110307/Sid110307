@@ -96,7 +96,7 @@ author_profile: true
         <div class="skill-title">Vim</div>
     </div>
     <div class="skill-card">
-        {% simpleicons make %}
+        {% simpleicons gnu %}
         <div class="skill-title">Make</div>
     </div>
  <div class="skill-card">

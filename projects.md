@@ -25,7 +25,7 @@ Here are some of my open-source projects across my focus areas:
 
 ## 🤖 Artificial Intelligence & Machine Learning
 
-*Simple experiments with neural networks.*
+*Simple experiments with neural networks and models.*
 
 - [AI](https://github.com/Sid110307/AI) - Neural network trained on datasets for numerical prediction
 - [Neuron](https://github.com/Sid110307/Neuron) - Simple neural network in C
@@ -34,7 +34,7 @@ Here are some of my open-source projects across my focus areas:
 
 *Games and game engine experiments.*
 
-- [ShadowDoom](https://github.com/Sid110307/ShadowDoom) - Fantasy console game in Python
+- [ShadowDoom](https://github.com/Sid110307/ShadowDoom) - Fantasy text-based console game in Python
 - [Reckoning](https://github.com/Sid110307/Reckoning) - Minimal 3D game made using Ursina engine
 
 ## 🎨 Graphics & Visualization
