@@ -58,6 +58,8 @@ skills:
         name: Prisma
       - icon: supabase
         name: Supabase
+      - icon: firebase
+        name: Firebase (basic)
       - icon: postgresql
         name: PostgreSQL
       - icon: mysql
@@ -68,6 +70,8 @@ skills:
     items:
       - icon: githubactions
         name: GitHub Actions
+      - icon: googlecloud
+        name: Google Cloud Platform (GCP)
       - icon: expo
         name: EAS (Expo)
       - icon: docker
