@@ -14,7 +14,7 @@ I'm a full-stack and systems programmer based in India, passionate about:
 A few of my open-source projects across my focus areas:
 
 - [TestOS](https://github.com/Sid110307/TestOS) - Simple operating system with memory management, paging, interrupts
-- [quarklang-vm](https://github.com/Sid110307/quarklang-vm) - Stack-based VM with bytecode, REPL, and custom debugger
+- [quarklang-vm](https://github.com/Sid110307/quarklang-vm) - Stack-based VM with bytecode, REPL, plugins, and custom debugger
 - [AxiLang](https://github.com/Sid110307/AxiLang) - A scripting language for controlling the AxiDraw plotter
 - [ShadowDoom](https://github.com/Sid110307/ShadowDoom) - Fantasy text-based console game made with Python
 - [SoundTest](https://github.com/Sid110307/SoundTest) - C++ ImGui audio tool for generating, editing, and playing tones with internal PC speaker

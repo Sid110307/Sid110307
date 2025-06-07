@@ -13,11 +13,11 @@ author_profile: true
     {% for skill in section.items %}
     <div class="card">
         {% if skill.icon %}
-        <img src="https://cdn.simpleicons.org/{{ skill.icon }}/black" alt="{{ skill.name }}">
+        <img src="https://cdn.simpleicons.org/{{ skill.icon }}/black" title="{{ skill.name }}" alt="{{ skill.name }}" />
         {% elsif skill.icon_fa %}
-        <i class="{{ skill.icon_fa }}"></i>
+        <i class="fa-fw {{ skill.icon_fa }}" title="{{ skill.name }}"></i>
         {% else %}
-        <i class="fas fa-fw fa-code"></i>
+        <i class="fas fa-fw fa-code" title="{{ skill.name }}"></i>
         {% endif %}
         <div class="card-title">{{ skill.name }}</div>
     </div>
