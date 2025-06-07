@@ -201,6 +201,28 @@ skills:
         name: Tokenization
       - icon_fa: fas fa-file-code
         name: Bytecode emulation
+  - title: Soft Skills
+    items:
+      - icon_fa: fas fa-comments
+        name: Communication
+      - icon_fa: fas fa-users
+        name: Teamwork & Collaboration
+      - icon_fa: fas fa-lightbulb
+        name: Problem Solving
+      - icon_fa: fas fa-tasks
+        name: Project Management
+      - icon_fa: fas fa-clock
+        name: Time Management
+      - icon_fa: fas fa-handshake
+        name: Client Interaction
+      - icon_fa: fas fa-brain
+        name: Critical Thinking
+      - icon_fa: fas fa-hand-holding-heart
+        name: Empathy
+      - icon_fa: fas fa-graduation-cap
+        name: Continuous Learning
+      - icon_fa: fas fa-bolt
+        name: Adaptability
 experience:
   - title: Senior Software Engineer
     organization: HustleX (XElite Studios Pvt. Ltd.)
