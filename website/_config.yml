@@ -10,7 +10,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-include-cache
-  - jekyll-simple-icons
 google_site_verification: "4GuCcJQhlsmrDinyVqD3GJNlK-0CgE6ZL334w8HxPuU"
 minimal_mistakes_skin: "air"
 sass:

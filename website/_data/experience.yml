@@ -1,0 +1,219 @@
+skills:
+  - title: Programming Languages
+    items:
+      - icon: python
+        name: Python
+      - icon: c
+        name: C
+      - icon: cplusplus
+        name: C++
+      - icon_fa: fab fa-java
+        name: Java
+      - icon: kotlin
+        name: Kotlin
+      - icon: javascript
+        name: JavaScript
+      - icon: typescript
+        name: TypeScript
+      - icon: gnubash
+        name: Bash
+      - name: x86 Assembly (basic)
+      - icon: json
+        name: JSON
+      - icon: yaml
+        name: YAML
+      - icon: markdown
+        name: Markdown
+  - title: Frontend & UI Development
+    items:
+      - icon: html5
+        name: HTML/CSS
+      - icon: react
+        name: React
+      - icon: react
+        name: React Native
+      - icon: nodedotjs
+        name: Node.js
+      - icon: expo
+        name: Expo
+      - icon: android
+        name: Android SDK
+      - icon: vuedotjs
+        name: Vue (basic)
+      - icon: angular
+        name: Angular (basic)
+      - icon_fa: fas fa-window-maximize
+        name: ImGui
+      - icon_fa: fas fa-desktop
+        name: SDL2
+  - title: Backend Frameworks & Databases
+    items:
+      - icon: express
+        name: Express
+      - icon: flask
+        name: Flask (basic)
+      - icon: apollographql
+        name: Apollo GraphQL
+      - icon: prisma
+        name: Prisma
+      - icon: supabase
+        name: Supabase
+      - icon: postgresql
+        name: PostgreSQL
+      - icon: mysql
+        name: MySQL
+      - icon: sqlite
+        name: SQLite
+  - title: DevOps & CI/CD
+    items:
+      - icon: githubactions
+        name: GitHub Actions
+      - icon: expo
+        name: EAS (Expo)
+      - icon: docker
+        name: Docker (basic)
+      - icon_fa: fas fa-gear
+        name: systemd
+      - icon_fa: fas fa-calendar-alt
+        name: cron (basic)
+  - title: Tools
+    items:
+      - icon: git
+        name: Git
+      - icon: github
+        name: GitHub
+      - name: VS Code
+      - icon: jetbrains
+        name: JetBrains IDEs
+      - icon: vim
+        name: Vim
+      - name: Visual Studio
+      - icon_fa: fas fa-terminal
+        name: CLI tools
+      - icon: cmake
+        name: CMake
+      - icon: gnu
+        name: Make
+      - icon: postman
+        name: Postman
+      - icon: figma
+        name: Figma
+      - icon: freecad
+        name: FreeCAD
+      - icon: blender
+        name: Blender
+      - icon_fa: fas fa-project-diagram
+        name: GraphViz
+      - icon: linear
+        name: Linear
+      - icon: trello
+        name: Trello
+  - title: Graphics & Game Development
+    items:
+      - icon: opengl
+        name: OpenGL
+      - icon_fa: fas fa-image
+        name: Framebuffer
+      - icon_fa: fas fa-bullseye
+        name: Raycasting
+      - icon: unity
+        name: Unity (basic)
+      - icon_fa: fas fa-cube
+        name: Ursina Engine (basic)
+  - title: AI/ML and Data Science
+    items:
+      - icon: numpy
+        name: NumPy
+      - icon: pandas
+        name: Pandas
+      - icon_fa: fas fa-chart-simple
+        name: Matplotlib
+      - icon: opencv
+        name: OpenCV
+      - icon: tensorflow
+        name: TensorFlow Lite (basic)
+      - icon: openai
+        name: OpenAI API
+  - title: OS Development & Low-level Systems
+    items:
+      - icon_fa: fas fa-microchip
+        name: UEFI
+      - icon_fa: fas fa-server
+        name: Bootloaders
+      - icon_fa: fas fa-memory
+        name: Memory management
+      - icon_fa: fas fa-gears
+        name: Syscalls
+      - icon_fa: fas fa-code-branch
+        name: Threading
+      - icon_fa: fas fa-plug-circle-bolt
+        name: GPIO
+  - title: Platforms & Embedded Systems
+    items:
+      - icon: linux
+        name: Linux (Debian-based)
+      - icon_fa: fab fa-windows
+        name: Windows
+      - icon: macos
+        name: macOS
+      - icon: android
+        name: Android
+      - icon: ios
+        name: iOS (basic)
+      - icon: raspberrypi
+        name: Raspberry Pi
+      - icon: arduino
+        name: Arduino
+      - icon_fa: fas fa-microchip
+        name: ESP32/ESP8266
+  - title: APIs & Protocols
+    items:
+      - icon_fa: fas fa-cloud
+        name: REST
+      - icon: graphql
+        name: GraphQL
+      - icon_fa: fas fa-network-wired
+        name: HTTP/S
+      - icon_fa: fas fa-right-left
+        name: WebSockets
+      - icon_fa: fas fa-network-wired
+        name: TCP/UDP
+      - icon: bluetooth
+        name: BLE
+      - icon_fa: fas fa-plug
+        name: UART
+  - title: Cybersecurity
+    items:
+      - icon: burpsuite
+        name: Burp Suite
+      - icon: wireshark
+        name: Wireshark (basic)
+      - icon_fa: fas fa-hexagon-nodes
+        name: Nmap (basic)
+      - icon_fa: fas fa-shield-halved
+        name: Request interception
+  - title: Language Internals & Tooling Concepts
+    items:
+      - icon_fa: fas fa-square-binary
+        name: Language design
+      - name: Interpreters
+      - icon_fa: fas fa-table-columns
+        name: Tokenization
+      - icon_fa: fas fa-file-code
+        name: Bytecode emulation
+experience:
+  - title: Senior Software Engineer
+    organization: HustleX (XElite Studios Pvt. Ltd.)
+    date: Mar 2022 - Present (ongoing)
+    bullets:
+      - Led backend and frontend development across multiple products with full-stack integration.
+      - Designed mobile apps using React Native with Node.js and PostgreSQL backend, using Supabase for authentication and database management.
+      - Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform (GCP) infrastructure.
+      - Built real-time systems using WebSockets and REST APIs.
+  - title: Research Intern
+    organization: Interdisciplinary Centre for Energy Research (ICER), Indian Institute of Science
+    date: Apr 2023 - Oct 2024 (completed)
+    bullets:
+      - Designed CAD models for microfluidic sensors used to detect specific substances.
+      - Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.
+      - Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Plotly.js for monitoring data.

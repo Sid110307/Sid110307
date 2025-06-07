@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+p {
+    text-align: justify;
+}
+
 hr {
     border: none;
     border-top: 1px solid #DDDDDD;
@@ -32,14 +36,14 @@ hr {
     margin: 1.5rem 0;
 }
 
-.skill-grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-bottom: 2rem;
 }
 
-.skill-card {
+.card {
     background: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 16px;
@@ -77,19 +81,40 @@ hr {
         line-height: 32px;
     }
 
-    .skill-title {
+    .card-title {
         font-size: clamp(0.75rem, 2vw, 1rem);
         font-weight: 600;
         color: #222222;
         text-wrap: balance;
         overflow-wrap: anywhere;
     }
+
+    &.column {
+        flex-direction: column;
+        align-items: flex-start;
+
+        i, img {
+            margin-bottom: 8px;
+            margin-right: 0;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+    }
 }
 
-.skill-title {
+.card-title {
     font-size: clamp(0.75rem, 2vw, 1rem);
     font-weight: 600;
     color: #222222;
     text-wrap: balance;
     overflow-wrap: anywhere;
+}
+
+.card-extra {
+    font-size: 0.9rem;
+    color: #555555;
+    flex-grow: 1;
 }

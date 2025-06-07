@@ -1,0 +1,103 @@
+projects:
+  - title: 🖥️ Operating Systems & Low-level Programming
+    description: Projects exploring OS kernels, emulators, and system-level code.
+    items:
+      - name: TestOS
+        url: https://github.com/Sid110307/TestOS
+        extra: Simple operating system with memory management, paging, interrupts
+      - name: 6502-Emulator
+        url: https://github.com/Sid110307/6502-Emulator
+        extra: Emulator for the 6502 microprocessor in C++
+  - title: 🛠️ Languages, VMs, Compilers
+    description: Building interpreters, VMs, and language tools.
+    items:
+      - name: quarklang-vm
+        url: https://github.com/Sid110307/quarklang-vm
+        extra: Stack-based VM with bytecode, REPL, and custom debugger
+      - name: AxiLang
+        url: https://github.com/Sid110307/AxiLang
+        extra: A scripting language for controlling the AxiDraw plotter
+      - name: ToyLang
+        url: https://github.com/Sid110307/ToyLang
+        extra: A simple toy programming language
+      - name: PYC
+        url: https://github.com/Sid110307/PYC
+        extra: Emulating a subset of Python bytecode instructions
+  - title: 🤖 Artificial Intelligence & Machine Learning
+    description: Simple experiments with neural networks and models.
+    items:
+      - name: AI
+        url: https://github.com/Sid110307/AI
+        extra: Neural network trained on datasets for numerical prediction
+      - name: Neuron
+        url: https://github.com/Sid110307/Neuron
+        extra: Simple neural network in C
+  - title: 🎨 Graphics & Visualization
+    description: Graphics engines and rendering tests.
+    items:
+      - name: FBGraphics
+        url: https://github.com/Sid110307/FBGraphics
+        extra: C++ graphics engine directly manipulating framebuffer pixels
+      - name: GraphicLib
+        url: https://github.com/Sid110307/GraphicLib
+        extra: Simple X11 2D graphics engine with physics
+      - name: Graphics-Test-1
+        url: https://github.com/Sid110307/Graphics-Test-1
+        extra: OpenGL and GLFW test
+      - name: Graphics-Test-2
+        url: https://github.com/Sid110307/Graphics-Test-2
+        extra: OpenGL Test with camera movement
+      - name: Graphics-Test-3
+        url: https://github.com/Sid110307/Graphics-Test-3
+        extra: OpenGL ES 3.1 Test for Android
+      - name: Graphics-Test-4
+        url: https://github.com/Sid110307/Graphics-Test-4
+        extra: OpenGL and GLFW test with ImGui
+      - name: Graphics-Test-5
+        url: https://github.com/Sid110307/Graphics-Test-5
+        extra: Simple raycasting engine with OpenGL
+      - name: Graphics-Test-6
+        url: https://github.com/Sid110307/Graphics-Test-6
+        extra: Graphics test with Win32 API and GDI+
+  - title: 🎮 Game Development
+    description: Games and game engine experiments.
+    items:
+      - name: ShadowDoom
+        url: https://github.com/Sid110307/ShadowDoom
+        extra: Fantasy text-based console game in Python
+      - name: Reckoning
+        url: https://github.com/Sid110307/Reckoning
+        extra: Minimal 3D game made using Ursina engine
+  - title: 📱 Mobile Apps
+    description: Mobile apps for Android and iOS.
+    items:
+      - name: BLEConnector
+        url: https://github.com/Sid110307/BLEConnector
+        extra: Bluetooth Low Energy connector/scanner for Android
+      - name: VoiceLink
+        url: https://github.com/Sid110307/VoiceLink
+        extra: App to send audio from iPhone to Apple Watch
+      - name: TodoApp
+        url: https://github.com/Sid110307/TodoApp
+        extra: Simple todo management app
+  - title: 🔧 Tools & Utilities
+    description: Small utilities and tools across platforms.
+    items:
+      - name: SoundTest
+        url: https://github.com/Sid110307/SoundTest
+        extra: C++ ImGui audio tool for generating, editing, and playing tones with internal PC speaker
+      - name: WebServer
+        url: https://github.com/Sid110307/WebServer
+        extra: Simple web server using C++ sockets
+      - name: RelayController
+        url: https://github.com/Sid110307/RelayController
+        extra: Program to control relays using Raspberry Pi GPIO
+      - name: PDFImager
+        url: https://github.com/Sid110307/PDFImager
+        extra: Program to convert PDF to images using PyPDF2
+      - name: FeedbackBot
+        url: https://github.com/Sid110307/FeedbackBot
+        extra: Discord bot for investor feedback
+      - name: Garble
+        url: https://github.com/Sid110307/Garble
+        extra: Base64 encryption/decryption tool in Java

@@ -7,7 +7,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
   gem "jekyll-include-cache"
-  gem "jekyll-simple-icons"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do

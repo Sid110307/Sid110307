@@ -25,7 +25,7 @@ A few of my open-source projects across my focus areas:
 - [AxiLang](https://github.com/Sid110307/AxiLang) - A scripting language for controlling the AxiDraw plotter
 - [ShadowDoom](https://github.com/Sid110307/ShadowDoom) - Fantasy text-based console game made with Python
 - [SoundTest](https://github.com/Sid110307/SoundTest) - C++ ImGui audio tool for generating, editing, and playing tones with internal PC speaker
-- [FBGraphics](https://github.com/Sid110307/FBGraphics) - C++ graphics engine by directly manipulating framebuffer pixels
+- [FBGraphics](https://github.com/Sid110307/FBGraphics) - C++ graphics engine directly manipulating framebuffer pixels
 
 ## 🔒 A few Private/Internal Projects
 
