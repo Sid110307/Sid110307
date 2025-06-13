@@ -17,6 +17,7 @@ skills:
         name: TypeScript
       - icon: gnubash
         name: Bash
+      - name: Batch
       - name: x86 Assembly (basic)
       - icon: json
         name: JSON
@@ -112,6 +113,8 @@ skills:
         name: Linear
       - icon: trello
         name: Trello
+      - icon: notion
+        name: Notion
   - title: Graphics & Game Development
     items:
       - icon: opengl
@@ -205,6 +208,8 @@ skills:
         name: Tokenization
       - icon_fa: fas fa-file-code
         name: Bytecode emulation
+      - icon_fa: fas fa-code
+        name: Compiler design
   - title: Soft Skills
     items:
       - icon_fa: fas fa-comments
