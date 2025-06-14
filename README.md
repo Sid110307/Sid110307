@@ -42,5 +42,6 @@ A few of my open-source projects across my focus areas:
 
 ---
 
-![](https://github-readme-stats-sid110307.vercel.app/api?username=Sid110307&show_icons=true)
-![](https://github-readme-stats-sid110307.vercel.app/api/top-langs/?username=Sid110307&langs_count=10&layout=compact)
+![](https://github-readme-stats-sid110307.vercel.app/api?username=Sid110307&show_icons=true&include_all_commits=true)
+![](https://github-readme-stats-sid110307.vercel.app/api/top-langs/?username=Sid110307&size_weight=0.5&count_weight=0.5&layout=compact)
+![](https://github-readme-stats.vercel.app/api/wakatime?username=Sid110307&layout=compact)

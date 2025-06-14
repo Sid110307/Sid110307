@@ -36,6 +36,12 @@ A few of my open-source projects across my focus areas:
 - [Attendifier](https://github.com/Sid110307/Attendifier) - Face recognition-based attendance management system
 - [Earther](https://github.com/Sid110307/Earther) - Android app for voltage + GPS data logging with graph visualization and CSV export
 
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats-sid110307.vercel.app/api?username=Sid110307&show_icons=true&include_all_commits=true)
+![Top Languages](https://github-readme-stats-sid110307.vercel.app/api/top-langs/?username=Sid110307&size_weight=0.5&count_weight=0.5&layout=compact)
+![Hours](https://github-readme-stats.vercel.app/api/wakatime?username=Sid110307&layout=compact)
+
 ---
 
 *Last updated: {{ site.time | date: "%B %d, %Y" }}*
