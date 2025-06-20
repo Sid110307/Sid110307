@@ -2,6 +2,10 @@ projects:
   - title: 🖥️ Operating Systems & Low-level Programming
     description: Projects exploring OS kernels, emulators, and system-level code.
     items:
+      - name: Mesh
+        url: https://github.com/Sid110307/Mesh
+        extra: A lightweight OS kernel with SMP, paging, framebuffer, and basic IO, written in C++ and x86 Assembly
+        tech: c, cplusplus, fas fa-square-binary
       - name: TestOS
         url: https://github.com/Sid110307/TestOS
         extra: Simple operating system with memory management, paging, interrupts
