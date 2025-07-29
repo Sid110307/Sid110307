@@ -22,8 +22,9 @@ A few of my open-source projects across my focus areas:
 
 ## 🔒 A few Private/Internal Projects
 
-*(Code not public due to organization or other constraints - happy to discuss details!)*
+*(Source code is private due to organization or other constraints - happy to discuss details!)*
 
+- [Ankura](https://github.com/Sid110307/Ankura) - A Community-Powered Sapling Rescue Platform
 - [TreeMap](https://github.com/Sid110307/TreeMap) - Geospatial tree mapping tool for environmental research with on-device AI and offline-first support
 - [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV reliability test bed
 - [Attendifier](https://github.com/Sid110307/Attendifier) - Face recognition-based attendance management system
