@@ -39,7 +39,6 @@ A few of my open-source projects across my focus areas:
 - [DEV Community](https://dev.to/@sid110307)
 - [Stack Overflow](https://stackoverflow.com/users/13852870)
 - [Discord](https://discord.com/users/sid110307)
-- [Instagram](https://www.instagram.com/sid.110307)
 
 ---
 

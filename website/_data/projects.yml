@@ -14,7 +14,7 @@ projects:
         url: https://github.com/Sid110307/6502-Emulator
         extra: Emulator for the 6502 microprocessor in C++
         tech: cplusplus, cmake
-  - title: 🛠️ Languages, VMs, Compilers
+  - title: 🛠️ Languages & Compilers
     description: Building interpreters, VMs, and language tools.
     items:
       - name: quarklang-vm
@@ -55,6 +55,10 @@ projects:
         url: https://github.com/Sid110307/GraphicLib
         extra: Simple X11 2D graphics engine with physics
         tech: cplusplus, cmake
+      - name: ImageParser
+        url: https://github.com/Sid110307/ImageParser
+        extra: Image parser and OpenGL renderer for a wide range of formats
+        tech: c, opengl, cmake
       - name: Graphics-Test-1
         url: https://github.com/Sid110307/Graphics-Test-1
         extra: OpenGL and GLFW test
@@ -101,12 +105,16 @@ projects:
         url: https://github.com/Sid110307/VoiceLink
         extra: App to send audio from iPhone to Apple Watch
         tech: swift, ios
+      - name: RelayController
+        url: https://github.com/Sid110307/RelayController
+        extra: Android app to control Raspberry Pi GPIO relays remotely
+        tech: kotlin, android
       - name: TodoApp
         url: https://github.com/Sid110307/TodoApp
         extra: Simple todo management app
         tech: kotlin, android
   - title: 🔧 Tools & Utilities
-    description: Small utilities and tools across platforms.
+    description: Small utilities and developer tools across platforms.
     items:
       - name: SoundTest
         url: https://github.com/Sid110307/SoundTest
@@ -116,10 +124,6 @@ projects:
         url: https://github.com/Sid110307/WebServer
         extra: Simple web server using C++ sockets
         tech: cplusplus, cmake
-      - name: RelayController
-        url: https://github.com/Sid110307/RelayController
-        extra: Android app to control Raspberry Pi GPIO relays remotely
-        tech: kotlin, android
       - name: NQueens
         url: https://github.com/Sid110307/NQueens
         extra: C++ program that solves the N-Queens problem using backtracking
