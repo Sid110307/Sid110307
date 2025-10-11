@@ -7,6 +7,8 @@ skills:
         name: C
       - icon: cplusplus
         name: C++
+      - icon: dotnet
+        name: C#
       - icon_fa: fab fa-java
         name: Java
       - icon: kotlin
@@ -105,6 +107,8 @@ skills:
         name: Figma
       - icon: freecad
         name: FreeCAD
+      - icon: kicad
+        name: KiCad
       - icon: blender
         name: Blender
       - icon_fa: fas fa-project-diagram
@@ -233,18 +237,18 @@ skills:
       - icon_fa: fas fa-bolt
         name: Adaptability
 experience:
-  - title: Senior Software Engineer
+  - title: Chief Technology Officer
     organization: HustleX (XElite Studios Pvt. Ltd.)
-    date: Mar 2022 - Present (ongoing)
+    date: Mar 2022 - Present
     bullets:
       - Led backend and frontend development across multiple products with full-stack integration.
       - Designed mobile apps using React Native with Node.js and PostgreSQL backend, using Supabase for authentication and database management.
       - Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform (GCP) infrastructure.
       - Built real-time systems using WebSockets and REST APIs.
   - title: Research Intern
-    organization: Interdisciplinary Centre for Energy Research (ICER), Indian Institute of Science
-    date: Apr 2023 - Oct 2024 (completed)
+    organization: Interdisciplinary Centre for Energy Research (ICER), Indian Institute of Science, Bengaluru
+    date: Apr 2023 - Oct 2024
     bullets:
       - Designed CAD models for microfluidic sensors used to detect specific substances.
       - Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.
-      - Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Plotly.js for monitoring data.
+      - Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Apache ECharts for monitoring data.
