@@ -28,6 +28,7 @@ author_profile: true
 ## 💼 Experience
 
 {% for entry in site.data.experience.experience %}
+
 ### {{ entry.title }}
 
 **{{ entry.organization }}**  
