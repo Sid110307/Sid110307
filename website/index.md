@@ -10,6 +10,7 @@ author_profile: true
 I'm a full-stack and systems programmer based in India, passionate about:
 
 - 🚀 **Embedded systems** and low-level programming
+- 🔧 **Hardware design** and PCB development
 - 🖥️ **Operating systems** and emulation
 - 🤖 **AI/ML** and intelligent systems
 - 🎮 **Game development** and creative computing
@@ -21,10 +22,12 @@ I'm a full-stack and systems programmer based in India, passionate about:
 A few of my open-source projects across my focus areas:
 
 - [Mesh](https://github.com/Sid110307/Mesh) - A lightweight OS kernel with SMP, paging, framebuffer, and basic IO
-- [quarklang-vm](https://github.com/Sid110307/quarklang-vm) - Stack-based VM with bytecode, REPL, plugins, and custom debugger
+- [quarklang-vm](https://github.com/Sid110307/quarklang-vm) - Stack-based VM with bytecode, REPL, plugins, and custom
+  debugger
 - [AxiLang](https://github.com/Sid110307/AxiLang) - A scripting language for controlling the AxiDraw plotter
 - [ShadowDoom](https://github.com/Sid110307/ShadowDoom) - Fantasy text-based console game made with Python
-- [SoundTest](https://github.com/Sid110307/SoundTest) - C++ ImGui audio tool for generating, editing, and playing tones with internal PC speaker
+- [SoundTest](https://github.com/Sid110307/SoundTest) - C++ ImGui audio tool for generating, editing, and playing tones
+  with internal PC speaker
 - [FBGraphics](https://github.com/Sid110307/FBGraphics) - C++ graphics engine directly manipulating framebuffer pixels
 
 ## 🔒 A few Private/Internal Projects
@@ -33,10 +36,13 @@ A few of my open-source projects across my focus areas:
 
 - [HustleX](https://hustlex.club) - Gamified AI fitness app that rewards you for your fitness activity
 - [Ankura](https://github.com/Sid110307/Ankura) - A Community-Powered Sapling Rescue Platform
-- [TreeMap](https://github.com/Sid110307/TreeMap) - Geospatial tree mapping tool for environmental research with on-device AI and offline-first support
-- [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV reliability test bed
+- [TreeMap](https://github.com/Sid110307/TreeMap) - Geospatial tree mapping tool for environmental research with
+  on-device AI and offline-first support
+- [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV
+  reliability test bed
 - [Attendifier](https://github.com/Sid110307/Attendifier) - Face recognition-based attendance management system
-- [Earther](https://github.com/Sid110307/Earther) - Android app for voltage + GPS data logging with graph visualization and CSV export
+- [Earther](https://github.com/Sid110307/Earther) - Android app for voltage + GPS data logging with graph visualization
+  and CSV export
 
 ## 📊 GitHub Stats
 

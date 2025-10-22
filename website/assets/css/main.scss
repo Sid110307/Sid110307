@@ -34,7 +34,7 @@ li {
 
 hr {
     border: none;
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid #DDD;
     margin: 2rem 0;
 }
 
@@ -54,8 +54,8 @@ hr {
 }
 
 .card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
+    background: #FFF;
+    border: 1px solid #E0E0E0;
     border-radius: 16px;
     padding: 16px;
     display: flex;
@@ -68,8 +68,8 @@ hr {
     &:hover {
         transform: translateY(-6px) scale(1.025);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        border-color: #c0c0c0;
-        background: #f0f0f0;
+        border-color: #C0C0C0;
+        background: #F0F0F0;
     }
 
     i, img {
@@ -82,7 +82,7 @@ hr {
         font-size: 32px;
         line-height: 32px;
         margin-right: 16px;
-        color: #555555;
+        color: #555;
         filter: brightness(0) saturate(100%) invert(34%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
     }
 
@@ -94,7 +94,7 @@ hr {
     .card-title {
         font-size: clamp(0.75rem, 2vw, 1rem);
         font-weight: 600;
-        color: #222222;
+        color: #222;
         text-wrap: balance;
         overflow-wrap: anywhere;
     }
@@ -118,14 +118,14 @@ hr {
 .card-title {
     font-size: clamp(0.75rem, 2vw, 1rem);
     font-weight: 600;
-    color: #222222;
+    color: #222;
     text-wrap: balance;
     overflow-wrap: anywhere;
 }
 
 .card-extra {
     font-size: clamp(0.75rem, 1vw + 0.25rem, 0.9rem);
-    color: #555555;
+    color: #555;
     flex-grow: 1;
 }
 

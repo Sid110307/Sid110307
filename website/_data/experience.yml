@@ -45,6 +45,14 @@ skills:
         name: Vue (basic)
       - icon: angular
         name: Angular (basic)
+      - icon: ejs
+        name: EJS
+      - icon: tailwindcss
+        name: Tailwind CSS
+      - icon: bootstrap
+        name: Bootstrap
+      - icon: shadcnui
+        name: shadcn/ui
       - icon_fa: fas fa-window-maximize
         name: ImGui
       - icon_fa: fas fa-desktop
@@ -177,6 +185,8 @@ skills:
         name: Arduino
       - icon_fa: fas fa-microchip
         name: ESP32/ESP8266
+      - icon_fa: fas fa-microchip
+        name: MSP430
   - title: APIs & Protocols
     items:
       - icon_fa: fas fa-cloud

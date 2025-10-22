@@ -3,7 +3,7 @@ url: "https://sid110307.github.io"
 baseurl: "/Sid110307"
 remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 license: "© 2025-Present Siddharth Praveen Bharadwaj. All content under MIT license unless otherwise stated."
-github: [metadata]
+github: [ metadata ]
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
@@ -25,7 +25,7 @@ author:
   username: Sid110307
   avatar: https://avatars.githubusercontent.com/u/67900745
   email: siddharthpb2007@gmail.com
-  bio: Programmer passionate about embedded systems, OS, AI/ML, game dev, graphics, and more.
+  bio: Programmer passionate about embedded systems, PCB design, OS dev, AI/ML, game dev, graphics, and more.
 footer:
   links:
     - label: LinkedIn
