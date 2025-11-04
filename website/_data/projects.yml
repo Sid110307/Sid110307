@@ -14,6 +14,10 @@ projects:
         url: https://github.com/Sid110307/6502-Emulator
         extra: Emulator for the 6502 microprocessor in C++
         tech: cplusplus, cmake
+      - name: MSP430-Development
+        url: https://github.com/Sid110307/MSP430-Development
+        extra: Collection of programs and experiments for TI MSP430 MCUs
+        tech: c, make
   - title: 🛠️ Languages & Compilers
     description: Building interpreters, VMs, and language tools.
     items:
