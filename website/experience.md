@@ -5,7 +5,7 @@ permalink: /experience/
 author_profile: true
 ---
 
-## 🛠️ Skills
+## Skills
 
 {% for section in site.data.experience.skills %}
 <h3 id="{{ section.title | slugify }}">{{ section.title }}</h3>
@@ -25,7 +25,7 @@ author_profile: true
 </div>
 {% endfor %}
 
-## 💼 Experience
+## Experience
 
 {% for entry in site.data.experience.experience %}
 

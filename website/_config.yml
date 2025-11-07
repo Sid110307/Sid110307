@@ -25,7 +25,7 @@ author:
   username: Sid110307
   avatar: https://avatars.githubusercontent.com/u/67900745
   email: siddharthpb2007@gmail.com
-  bio: Programmer passionate about embedded systems, PCB design, OS dev, AI/ML, game dev, graphics, and more.
+  bio: Programmer passionate about embedded systems, PCB design, OS dev, graphics, and more.
 footer:
   links:
     - label: LinkedIn
@@ -37,15 +37,9 @@ footer:
     - label: Twitter
       icon: fab fa-x-twitter
       url: https://x.com/CoolorFoolSRS
-    - label: Reddit
-      icon: fab fa-reddit
-      url: https://reddit.com/u/CoolorFoolSRS
     - label: DEV Community
       icon: fab fa-dev
       url: https://dev.to/@sid110307
-    - label: Stack Overflow
-      icon: fab fa-stack-overflow
-      url: https://stackoverflow.com/users/13852870
     - label: Discord
       icon: fab fa-discord
       url: https://discord.com/users/sid110307

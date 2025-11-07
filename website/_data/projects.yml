@@ -92,7 +92,7 @@ projects:
     items:
       - name: ShadowDoom
         url: https://github.com/Sid110307/ShadowDoom
-        extra: Fantasy text-based console game in Python
+        extra: Fantasy text-based RPG in Python
         tech: python
       - name: Reckoning
         url: https://github.com/Sid110307/Reckoning
@@ -101,6 +101,10 @@ projects:
   - title: 📱 Mobile Apps
     description: Mobile apps for Android and iOS.
     items:
+      - name: SmartMoisture
+        url: https://github.com/Sid110307/SmartMoisture
+        extra: BLE moisture sensor app with custom equation support to transform raw values
+        tech: kotlin, android
       - name: BLEConnector
         url: https://github.com/Sid110307/BLEConnector
         extra: Bluetooth Low Energy connector/scanner for Android

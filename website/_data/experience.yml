@@ -82,7 +82,7 @@ skills:
       - icon: githubactions
         name: GitHub Actions
       - icon: googlecloud
-        name: Google Cloud Platform (GCP)
+        name: Google Cloud Platform
       - icon: expo
         name: EAS (Expo)
       - icon: docker
@@ -236,10 +236,6 @@ skills:
         name: Project Management
       - icon_fa: fas fa-clock
         name: Time Management
-      - icon_fa: fas fa-handshake
-        name: Client Interaction
-      - icon_fa: fas fa-brain
-        name: Critical Thinking
       - icon_fa: fas fa-hand-holding-heart
         name: Empathy
       - icon_fa: fas fa-graduation-cap
@@ -253,12 +249,14 @@ experience:
     bullets:
       - Led backend and frontend development across multiple products with full-stack integration.
       - Designed mobile apps using React Native with Node.js and PostgreSQL backend, using Supabase for authentication and database management.
-      - Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform (GCP) infrastructure.
-      - Built real-time systems using WebSockets and REST APIs.
+      - Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform infrastructure.
+      - Built real-time pub-sub systems using WebSockets and REST APIs.
+      - Grew user base to ~20% monthly active users (MAU) with ~300 users.
   - title: Research Intern
     organization: Interdisciplinary Centre for Energy Research (ICER), Indian Institute of Science, Bengaluru
     date: Apr 2023 - Oct 2024
     bullets:
-      - Designed CAD models for microfluidic sensors used to detect specific substances.
+      - Designed CAD models for microfluidic sensors used to detect specific substances and PCB layouts for sensor electronics.
       - Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.
       - Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Apache ECharts for monitoring data.
+      - Developed a pipeline to improve latency for data fetching and rendering of large datasets (1M+ data points under 500ms).

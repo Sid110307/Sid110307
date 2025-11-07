@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-## 🧠 Patents
+## Patents
 
 {% for patent in site.data.publications.patents %}
 
