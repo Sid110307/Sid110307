@@ -41,7 +41,7 @@ A few of my open-source projects across my focus areas:
 *(Source code is private due to organization or other constraints - happy to discuss details!)*
 
 - [HustleX](https://hustlex.club) - Gamified fitness app that rewards you for your fitness activity
-- [Ankura](https://github.com/Sid110307/Ankura) - A Community-Powered Sapling Rescue Platform
+- [Ankura](https://ankura.netlify.app) - A Community-Powered Sapling Rescue Platform
 - [TreeMap](https://github.com/Sid110307/TreeMap) - Geospatial tree mapping tool for environmental research with
   on-device AI and offline-first support
 - [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV
