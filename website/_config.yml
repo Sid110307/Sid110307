@@ -20,6 +20,15 @@ defaults:
     values:
       sidebar:
         nav: "main"
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
 author:
   name: Siddharth Praveen Bharadwaj
   username: Sid110307
