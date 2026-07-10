@@ -25,7 +25,7 @@ author:
   username: Sid110307
   avatar: https://avatars.githubusercontent.com/u/67900745
   email: siddharthpb2007@gmail.com
-  bio: Programmer passionate about embedded systems, PCB design, OS dev, graphics, and more.
+  bio: Systems and embedded developer working on operating systems, virtual machines, embedded devices and full-stack applications.
 footer:
   links:
     - label: LinkedIn
@@ -40,6 +40,3 @@ footer:
     - label: DEV Community
       icon: fab fa-dev
       url: https://dev.to/@sid110307
-    - label: Discord
-      icon: fab fa-discord
-      url: https://discord.com/users/sid110307

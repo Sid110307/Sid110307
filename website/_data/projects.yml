@@ -4,11 +4,7 @@ projects:
     items:
       - name: Mesh
         url: https://github.com/Sid110307/Mesh
-        extra: A lightweight OS kernel with SMP, paging, framebuffer, and basic IO, written in C++ and x86 Assembly
-        tech: c, cplusplus, fas fa-square-binary
-      - name: TestOS
-        url: https://github.com/Sid110307/TestOS
-        extra: Simple operating system with memory management, paging, interrupts
+        extra: An x86 OS kernel with SMP, paging, and IO, written in C++ and x86 Assembly
         tech: c, cplusplus, fas fa-square-binary
       - name: 6502-Emulator
         url: https://github.com/Sid110307/6502-Emulator
@@ -37,8 +33,42 @@ projects:
         url: https://github.com/Sid110307/PYC
         extra: Emulating a subset of Python bytecode instructions
         tech: cplusplus, python
+  - title: 📱 Mobile Apps
+    description: Mobile apps for Android and iOS.
+    items:
+      - name: SmartMoisture
+        url: https://github.com/Sid110307/SmartMoisture
+        extra: BLE moisture sensor app with custom equation support to transform raw values
+        tech: kotlin, android
+      - name: BLEConnector
+        url: https://github.com/Sid110307/BLEConnector
+        extra: Bluetooth Low Energy connector/scanner for Android
+        tech: kotlin, android
+      - name: VoiceLink
+        url: https://github.com/Sid110307/VoiceLink
+        extra: App to send audio from iPhone to Apple Watch
+        tech: swift, ios
+      - name: RelayController
+        url: https://github.com/Sid110307/RelayController
+        extra: Android app to control Raspberry Pi GPIO relays remotely
+        tech: kotlin, android
+      - name: TodoApp
+        url: https://github.com/Sid110307/TodoApp
+        extra: Simple todo management app
+        tech: kotlin, android
+  - title: 🎮 Game Development
+    description: Games and game engine experiments.
+    items:
+      - name: ShadowDoom
+        url: https://github.com/Sid110307/ShadowDoom
+        extra: Fantasy text-based RPG in Python
+        tech: python
+      - name: Reckoning
+        url: https://github.com/Sid110307/Reckoning
+        extra: Minimal 3D game made using Ursina engine
+        tech: python
   - title: 🤖 Artificial Intelligence & Machine Learning
-    description: Simple experiments with neural networks and models.
+    description: Experiments with neural networks and models.
     items:
       - name: AI
         url: https://github.com/Sid110307/AI
@@ -87,42 +117,8 @@ projects:
         url: https://github.com/Sid110307/Graphics-Test-6
         extra: Graphics test with Win32 API and GDI+
         tech: cplusplus, cmake
-  - title: 🎮 Game Development
-    description: Games and game engine experiments.
-    items:
-      - name: ShadowDoom
-        url: https://github.com/Sid110307/ShadowDoom
-        extra: Fantasy text-based RPG in Python
-        tech: python
-      - name: Reckoning
-        url: https://github.com/Sid110307/Reckoning
-        extra: Minimal 3D game made using Ursina engine
-        tech: python
-  - title: 📱 Mobile Apps
-    description: Mobile apps for Android and iOS.
-    items:
-      - name: SmartMoisture
-        url: https://github.com/Sid110307/SmartMoisture
-        extra: BLE moisture sensor app with custom equation support to transform raw values
-        tech: kotlin, android
-      - name: BLEConnector
-        url: https://github.com/Sid110307/BLEConnector
-        extra: Bluetooth Low Energy connector/scanner for Android
-        tech: kotlin, android
-      - name: VoiceLink
-        url: https://github.com/Sid110307/VoiceLink
-        extra: App to send audio from iPhone to Apple Watch
-        tech: swift, ios
-      - name: RelayController
-        url: https://github.com/Sid110307/RelayController
-        extra: Android app to control Raspberry Pi GPIO relays remotely
-        tech: kotlin, android
-      - name: TodoApp
-        url: https://github.com/Sid110307/TodoApp
-        extra: Simple todo management app
-        tech: kotlin, android
   - title: 🔧 Tools & Utilities
-    description: Small utilities and developer tools across platforms.
+    description: Small utilities and other miscellaneous projects.
     items:
       - name: SoundTest
         url: https://github.com/Sid110307/SoundTest

@@ -19,14 +19,7 @@ skills:
         name: TypeScript
       - icon: gnubash
         name: Bash
-      - name: Batch
       - name: x86 Assembly (basic)
-      - icon: json
-        name: JSON
-      - icon: yaml
-        name: YAML
-      - icon: markdown
-        name: Markdown
   - title: Frontend & UI Development
     items:
       - icon: html5
@@ -103,8 +96,6 @@ skills:
       - icon: vim
         name: Vim
       - name: Visual Studio
-      - icon_fa: fas fa-terminal
-        name: CLI tools
       - icon: cmake
         name: CMake
       - icon: gnu
@@ -121,12 +112,6 @@ skills:
         name: Blender
       - icon_fa: fas fa-project-diagram
         name: GraphViz
-      - icon: linear
-        name: Linear
-      - icon: trello
-        name: Trello
-      - icon: notion
-        name: Notion
   - title: Graphics & Game Development
     items:
       - icon: opengl
@@ -172,13 +157,9 @@ skills:
       - icon: linux
         name: Linux (Debian-based)
       - icon_fa: fab fa-windows
-        name: Windows
-      - icon: macos
-        name: macOS
+        name: Windows (Win32 API, GDI+)
       - icon: android
         name: Android
-      - icon: ios
-        name: iOS (basic)
       - icon: raspberrypi
         name: Raspberry Pi
       - icon: arduino
@@ -194,8 +175,6 @@ skills:
       - icon: graphql
         name: GraphQL
       - icon_fa: fas fa-network-wired
-        name: HTTP/S
-      - icon_fa: fas fa-right-left
         name: WebSockets
       - icon_fa: fas fa-network-wired
         name: TCP/UDP
@@ -203,16 +182,6 @@ skills:
         name: BLE
       - icon_fa: fas fa-plug
         name: UART
-  - title: Cybersecurity
-    items:
-      - icon: burpsuite
-        name: Burp Suite
-      - icon: wireshark
-        name: Wireshark (basic)
-      - icon_fa: fas fa-hexagon-nodes
-        name: Nmap (basic)
-      - icon_fa: fas fa-shield-halved
-        name: Request interception
   - title: Language Internals & Tooling Concepts
     items:
       - icon_fa: fas fa-square-binary
@@ -224,24 +193,6 @@ skills:
         name: Bytecode emulation
       - icon_fa: fas fa-code
         name: Compiler design
-  - title: Soft Skills
-    items:
-      - icon_fa: fas fa-comments
-        name: Communication
-      - icon_fa: fas fa-users
-        name: Teamwork & Collaboration
-      - icon_fa: fas fa-lightbulb
-        name: Problem Solving
-      - icon_fa: fas fa-tasks
-        name: Project Management
-      - icon_fa: fas fa-clock
-        name: Time Management
-      - icon_fa: fas fa-hand-holding-heart
-        name: Empathy
-      - icon_fa: fas fa-graduation-cap
-        name: Continuous Learning
-      - icon_fa: fas fa-bolt
-        name: Adaptability
 experience:
   - title: Chief Technology Officer
     organization: HustleX (XElite Studios Pvt. Ltd.)
@@ -259,4 +210,4 @@ experience:
       - Designed CAD models for microfluidic sensors used to detect specific substances and PCB layouts for sensor electronics.
       - Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.
       - Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Apache ECharts for monitoring data.
-      - Developed a pipeline to improve latency for data fetching and rendering of large datasets (1M+ data points under 500ms).
+      - Developed a pipeline to improve latency for fetching of large datasets (1M+ data points under 500ms).

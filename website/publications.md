@@ -11,7 +11,7 @@ author_profile: true
 
 ### {{ patent.title }}
 
-**Patent Number:** {{ patent.number }}  
+**Patent Reference:** {{ patent.number }}  
 **Date:** {{ patent.date }}  
 **Authors:** {{ patent.authors | join: ", " }}
 {% endfor %}
