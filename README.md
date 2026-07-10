@@ -4,11 +4,11 @@
 
 I'm a full-stack and systems programmer based in India, passionate about:
 
-- 🚀 **Embedded systems** and low-level programming
-- 🔧 **Hardware design** and PCB development
-- 🖥️ **Operating systems** and emulation
-- 🛠️ **Custom languages**, interpreters, and compilers
-- 📱 **Mobile apps** and full-stack development
+- **Embedded systems** and low-level programming
+- **Hardware design** and PCB development
+- **Operating systems** and emulation
+- **Custom languages**, interpreters, and compilers
+- **Mobile apps** and full-stack development
 
 </div>
 
