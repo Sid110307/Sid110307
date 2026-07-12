@@ -1,0 +1,194 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import TocList, { type TocNode } from "../components/Toc.astro";
+import { formatDate } from "../utils";
+import { getCanonicalUrl, withBase } from "../utils";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+	title: string;
+	description: string;
+	publishDate: Date;
+	category?: string;
+	tags: string[];
+	readingTime: number;
+	headings: Array<{ depth: number; slug: string; text: string }>;
+	previousPost?: CollectionEntry<"posts"> | null;
+	nextPost?: CollectionEntry<"posts"> | null;
+}
+
+const {
+	title,
+	description,
+	publishDate,
+	category,
+	tags,
+	readingTime,
+	headings,
+	previousPost,
+	nextPost,
+} = Astro.props as Props;
+const canonical = getCanonicalUrl(Astro.url.pathname);
+
+const buildHeadingTree = (
+	headings: Array<{ depth: number; slug: string; text: string }>,
+): TocNode[] => {
+	const roots: TocNode[] = [];
+	const stack: TocNode[] = [];
+
+	for (const heading of headings) {
+		if (heading.depth < 2 || heading.depth > 6) continue;
+
+		const node = { ...heading, children: [] };
+		while (stack.length > 0 && stack[stack.length - 1].depth >= node.depth) stack.pop();
+		const parent = stack[stack.length - 1];
+
+		if (parent) parent.children.push(node);
+		else roots.push(node);
+
+		stack.push(node);
+	}
+	return roots;
+};
+
+const tocItems = buildHeadingTree(headings);
+---
+
+<BaseLayout title={title} description={description} ogType="article" canonical={canonical}>
+    <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		headline: title,
+		description,
+		datePublished: publishDate.toISOString(),
+		dateModified: publishDate.toISOString(),
+		mainEntityOfPage: canonical,
+		author: {
+			"@type": "Person",
+			name: "Siddharth Praveen Bharadwaj",
+		},
+	})} />
+    <article class="site-shell post-page">
+        <div class="post-page__header prose">
+            <p class="section__eyebrow">
+                <a href={withBase("/posts/")}>Back to posts</a>
+            </p>
+            <header class="stack">
+                <h1>{title}</h1>
+                <p class="post-page__description">{description}</p>
+                <div class="meta-row">
+					<span class="meta-row__item">
+						<time datetime={publishDate.toISOString()}>
+							{formatDate(publishDate)}
+						</time>
+					</span>
+                    <span aria-hidden="true">·</span>
+                    <span class="meta-row__item">
+						{readingTime} min read
+					</span>
+					{category && (
+                            <>
+                                <span aria-hidden="true">·</span>
+                                <span class="meta-row__item">{category}</span>
+                            </>
+					)}
+                </div>
+				{tags.length > 0 && (
+                        <ul class="tag-list" aria-label="Post tags">
+							{tags.map((tag) => (
+                                    <li class="tag">{tag}</li>
+							))}
+                        </ul>
+				)}
+            </header>
+        </div>
+        <div class="post-page__grid">
+            <div class="post-page__content prose">
+                <div class="post-body">
+                    <slot />
+                </div>
+                <nav class="post-nav" aria-label="Post navigation">
+					{previousPost ? (
+                            <a href={withBase(`/posts/${previousPost.id}/`)}>
+                                <span>Previous</span>
+                                <strong>{previousPost.data.title}</strong>
+                            </a>
+					) : (
+                            <span />
+					)}
+					{nextPost ? (
+                            <a href={withBase(`/posts/${nextPost.id}/`)}>
+                                <span>Next</span>
+                                <strong>{nextPost.data.title}</strong>
+                            </a>
+					) : (
+                            <span />
+					)}
+                </nav>
+            </div>
+			{tocItems.length > 0 && (
+                    <aside class="toc post-page__toc" aria-label="Table of contents">
+                        <h2 class="toc__title">On this page</h2>
+                        <TocList items={tocItems} />
+                    </aside>
+			)}
+        </div>
+    </article>
+    <script>
+		const postPage = document.querySelector(".post-page");
+		if (postPage) {
+			const tocLinks = Array.from(postPage.querySelectorAll("[data-toc-link]"));
+			const headings = tocLinks
+				.map((link) => {
+					const id = link.getAttribute("data-toc-link");
+					return id ? document.getElementById(id) : null;
+				})
+				.filter((heading) => heading !== null);
+
+			const setActiveHeading = (activeHeading: HTMLElement | null) => {
+				const activeId = activeHeading?.id;
+
+				for (const link of tocLinks) {
+					const isActive = link.getAttribute("data-toc-link") === activeId;
+
+					if (isActive) link.setAttribute("aria-current", "location");
+					else link.removeAttribute("aria-current");
+				}
+
+				for (const heading of headings)
+					heading.classList.toggle("is-active-heading", heading === activeHeading);
+			};
+
+			let frameRequested = false;
+			const updateActiveHeading = () => {
+				frameRequested = false;
+
+				if (headings.length === 0) return;
+				const activationLine = Math.min(160, window.innerHeight * 0.25);
+
+				let activeHeading = headings[0];
+				for (const heading of headings) {
+					if (heading.getBoundingClientRect().top <= activationLine) activeHeading = heading;
+					else break;
+				}
+
+				if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4)
+					activeHeading = headings[headings.length - 1];
+				setActiveHeading(activeHeading);
+			};
+
+			const requestUpdate = () => {
+				if (frameRequested) return;
+
+				frameRequested = true;
+				window.requestAnimationFrame(updateActiveHeading);
+			};
+
+			window.addEventListener("scroll", requestUpdate, { passive: true });
+			window.addEventListener("resize", requestUpdate);
+			window.addEventListener("hashchange", requestUpdate);
+
+			requestUpdate();
+		}
+    </script>
+</BaseLayout>

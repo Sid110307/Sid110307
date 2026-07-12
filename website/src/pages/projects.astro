@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { PROJECTS } from "../data/projects";
+import { getCanonicalUrl, slugify } from "../utils";
+
+const description = "Selected projects spanning operating systems, compilers, mobile apps, graphics, AI/ML, and tools.";
+---
+
+<BaseLayout title="Projects" description={description} canonical={getCanonicalUrl("/projects/")}>
+    <section class="site-shell section">
+        <p class="section__eyebrow">Projects</p>
+        <h1 class="section__title">Selected projects</h1>
+        <p>{description}</p>
+        <div class="stack">
+			{PROJECTS.map((section) => (
+                    <section id={slugify(section.title)} class="stack">
+                        <div>
+                            <h2>{section.title}</h2>
+                            <p>{section.description}</p>
+                        </div>
+                        <div class="card-grid">
+							{section.projects.map((project) =>
+                                    <ProjectCard project={project} />)}
+                        </div>
+                    </section>
+			))}
+        </div>
+    </section>
+</BaseLayout>

@@ -1,0 +1,39 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL, GOOGLE_SITE_VERIFICATION } from "../data/site";
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	ogType?: "website" | "article";
+	image?: string;
+}
+
+const {
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+	canonical = SITE_URL,
+	ogType = "website",
+	image,
+} = Astro.props as Props;
+
+const fullTitle = title === SITE_TITLE ? title : `${title} · ${SITE_TITLE}`;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="theme-color" content="#2457d6" />
+<meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonical} />
+{image ?
+<meta property="og:image" content={image} /> : null}
+<meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+{image ?
+<meta name="twitter:image" content={image} /> : null}

@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationCard from "../components/PublicationCard.astro";
+import { PUBLICATIONS } from "../data/publications";
+import { getCanonicalUrl } from "../utils";
+
+const description = "Patent and publication information.";
+---
+
+<BaseLayout title="Publications" description={description} canonical={getCanonicalUrl("/publications/")}>
+    <section class="site-shell section">
+        <p class="section__eyebrow">Publications</p>
+        <h1 class="section__title">Publications</h1>
+        <p>{description}</p>
+        <div class="stack">
+			{PUBLICATIONS.map((publication) =>
+                    <PublicationCard publication={publication} />)}
+        </div>
+    </section>
+</BaseLayout>

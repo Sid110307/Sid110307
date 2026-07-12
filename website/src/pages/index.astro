@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import PublicationCard from "../components/PublicationCard.astro";
+import { AUTHOR, PRIVATE_PROJECTS, GITHUB_STATS, SITE_DESCRIPTION } from "../data/site";
+import { PROJECTS, FEATURED_PROJECTS } from "../data/projects";
+import { EXPERIENCE } from "../data/experience";
+import { PUBLICATIONS } from "../data/publications";
+import { withBase } from "../utils";
+import { getCanonicalUrl } from "../utils";
+
+const allProjects = PROJECTS.flatMap((section) => section.projects);
+const featured = FEATURED_PROJECTS.map((name) => allProjects.find((project) => project.name === name)).filter((project): project is (typeof allProjects)[number] => Boolean(project));
+const firstPublication = PUBLICATIONS[0];
+---
+
+<BaseLayout title="Hey, I'm Siddharth" description={SITE_DESCRIPTION} canonical={getCanonicalUrl("/")}>
+    <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: AUTHOR.name,
+		alternateName: AUTHOR.username,
+		email: AUTHOR.email,
+		url: `${getCanonicalUrl("/")}`,
+		sameAs: [
+			"https://github.com/Sid110307",
+			"https://linkedin.com/in/sid110307",
+			"https://x.com/CoolorFoolSRS",
+			"https://dev.to/@sid110307",
+		],
+	})} />
+    <section class="site-shell hero">
+        <div class="hero__copy">
+            <div class="hero__intro">
+                <p class="section__eyebrow">India · {AUTHOR.username}</p>
+                <h1>Hey, I&apos;m Siddharth</h1>
+                <p class="hero__lede">{SITE_DESCRIPTION}</p>
+                <p class="hero__lede">I focus on embedded systems, hardware and PCB development, operating systems and
+                    emulation, languages, interpreters, and compilers, and mobile and full-stack development.</p>
+            </div>
+            <div class="hero__actions" aria-label="Social links">
+                <a class="btn" href="https://github.com/Sid110307">GitHub</a>
+                <a class="btn" href="https://linkedin.com/in/sid110307">LinkedIn</a>
+                <a class="btn" href="https://x.com/CoolorFoolSRS">X/Twitter</a>
+                <a class="btn" href="https://dev.to/@sid110307">DEV Community</a>
+            </div>
+        </div>
+        <div class="hero__avatar-wrap">
+            <img class="hero__avatar"
+                 src={AUTHOR.avatar}
+                 alt={`${AUTHOR.name} avatar`}
+                 width="240"
+                 height="240"
+                 loading="eager"
+                 decoding="async" />
+            <p class="hero__avatar-caption">{AUTHOR.name}</p>
+        </div>
+    </section>
+    <section class="site-shell section">
+        <p class="section__eyebrow">
+            <a style="text-decoration: none; color: inherit;" href={withBase("/projects/")}>Selected public projects</a>
+        </p>
+        <div class="card-grid">
+			{featured.map((project) =>
+                    <ProjectCard project={project} />)}
+        </div>
+    </section>
+    <section class="site-shell section">
+        <p class="section__eyebrow">
+            <a style="text-decoration: none; color: inherit;" href={withBase("/experience/")}>Current experience</a>
+        </p>
+        <div class="card-grid">
+			{EXPERIENCE.map((entry) => (
+                    <article class="experience-entry">
+                        <h3 class="experience-entry__title">{entry.title}</h3>
+                        <p class="experience-entry__meta"><strong>{entry.organization}</strong><br />{entry.date}</p>
+                        <ul class="experience-entry__bullets">
+							{entry.bullets.map((bullet) => (
+                                    <li>{bullet}</li>
+							))}
+                        </ul>
+                    </article>
+			))}
+        </div>
+    </section>
+    <section class="site-shell section">
+        <p class="section__eyebrow">
+            <a style="text-decoration: none; color: inherit;" href={withBase("/publications/")}>Patents /
+                publications</a>
+        </p>
+        <div class="card-grid">
+			{firstPublication ?
+                    <PublicationCard publication={firstPublication} /> : null}
+        </div>
+    </section>
+    <section class="site-shell section">
+        <p class="section__eyebrow">Private / internal projects</p>
+        <p class="section__description">Some source code is private because of organizational or other constraints.</p>
+        <div class="card-grid">
+			{PRIVATE_PROJECTS.map((project) => (
+                    <article class="project-card">
+                        <h3 class="project-card__title"><a href={project.url}>{project.name}</a></h3>
+                        <p class="project-card__description">{project.description}</p>
+                    </article>
+			))}
+        </div>
+    </section>
+    <section class="site-shell section">
+        <p class="section__eyebrow">GitHub stats</p>
+        <div class="stats-grid">
+			{GITHUB_STATS.map((stat) => (
+                    <img style="width: 100%; height: auto; border-radius: 0.7rem; background: var(--bg-soft);"
+                         src={stat.src}
+                         alt={stat.alt}
+                         width={stat.width}
+                         height={stat.height}
+                         loading="lazy"
+                         decoding="async" />
+			))}
+        </div>
+    </section>
+</BaseLayout>

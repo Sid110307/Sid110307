@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "jsxImportSource": "astro/jsx",
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "noEmitOnError": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "bundler"
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

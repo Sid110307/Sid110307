@@ -1,0 +1,35 @@
+---
+export interface TocNode {
+	depth: number;
+	slug: string;
+	text: string;
+	children: TocNode[];
+}
+
+interface Props {
+	items: TocNode[];
+}
+
+const { items } = Astro.props;
+const formatHeading = (text: string): string => {
+	return text
+		.replaceAll("&", "&amp;")
+		.replaceAll("<", "&lt;")
+		.replaceAll(">", "&gt;")
+		.replaceAll("\"", "&quot;")
+		.replaceAll("'", "&#039;")
+		.replace(/`([^`]+)`/g, "<code>$1</code>");
+};
+---
+
+<ul class="toc__list">
+	{items.map((item) => (
+            <li>
+                <a href={`#${item.slug}`} data-toc-link={item.slug}>
+                    <Fragment set:html={formatHeading(item.text)} />
+                </a>
+				{item.children.length > 0 &&
+                        <Astro.self items={item.children} />}
+            </li>
+	))}
+</ul>

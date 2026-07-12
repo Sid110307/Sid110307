@@ -1,0 +1,22 @@
+---
+import type { ExperienceEntry as ExperienceEntryType } from "../data/experience";
+
+interface Props {
+	entry: ExperienceEntryType;
+}
+
+const { entry } = Astro.props as Props;
+---
+
+<article class="experience-entry">
+    <h3 class="experience-entry__title">{entry.title}</h3>
+    <p class="experience-entry__meta">
+        <strong>{entry.organization}</strong><br />
+        <time>{entry.date}</time>
+    </p>
+    <ul class="experience-entry__bullets">
+		{entry.bullets.map((bullet) => (
+                <li>{bullet}</li>
+		))}
+    </ul>
+</article>

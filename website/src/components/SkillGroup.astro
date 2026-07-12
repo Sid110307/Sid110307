@@ -1,0 +1,18 @@
+---
+import type { SkillGroup as SkillGroupType } from "../data/experience";
+
+interface Props {
+	group: SkillGroupType;
+}
+
+const { group } = Astro.props as Props;
+---
+
+<section class="skill-group">
+    <h3 class="skill-group__title">{group.title}</h3>
+    <ul class="skill-list" aria-label={group.title}>
+		{group.items.map((item) => (
+                <li class="skill-list__item">{item.name}</li>
+		))}
+    </ul>
+</section>

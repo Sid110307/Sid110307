@@ -1,0 +1,27 @@
+---
+import type { Publication } from "../data/publications";
+
+interface Props {
+	publication: Publication;
+	ownerName?: string;
+}
+
+const { publication, ownerName = "Siddharth Praveen Bharadwaj" } = Astro.props as Props;
+---
+
+<article class="publication-card">
+    <h3 class="publication-card__title">{publication.title}</h3>
+    <p class="publication-card__meta">
+        <strong>Reference:</strong> {publication.number}<br />
+        <strong>Date:</strong> {publication.date}
+    </p>
+    <p class="publication-card__description">
+        <strong>Authors:</strong>{" "}
+		{publication.authors.map((author, index) => (
+                <>
+					{index > 0 ? ", " : null}
+					{author === ownerName ? <strong>{author}</strong> : author}
+                </>
+		))}
+    </p>
+</article>

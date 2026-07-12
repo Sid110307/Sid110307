@@ -1,0 +1,38 @@
+---
+import { AUTHOR } from "../data/site";
+import { NAVIGATION } from "../data/navigation";
+import ThemeToggle from "./ThemeToggle.astro";
+import { withBase } from "../utils";
+
+interface Props {
+	pathname: string;
+}
+
+const { pathname } = Astro.props as Props;
+---
+
+<header class="site-header">
+    <div class="site-shell site-header__inner">
+        <a class="brand" href={withBase("/")} aria-label={`${AUTHOR.name} home`}>
+            <span>{AUTHOR.username}</span>
+        </a>
+        <div class="site-header__actions">
+            <nav class="site-nav" aria-label="Primary">
+                <ul class="site-nav__list">
+					{NAVIGATION.map((item) => {
+						const href = withBase(item.url);
+						const current = pathname === href || pathname === href.replace(/\/$/, "");
+						return (
+                                <li>
+                                    <a class="site-nav__link" href={href} aria-current={current ? "page" : undefined}>
+										{item.title}
+                                    </a>
+                                </li>
+						);
+					})}
+                </ul>
+            </nav>
+            <ThemeToggle />
+        </div>
+    </div>
+</header>

@@ -1,0 +1,14 @@
+---
+import { LICENSE, SOCIAL_LINKS } from "../data/site";
+---
+
+<footer class="site-footer">
+    <div class="site-shell site-footer__inner">
+        <p>{LICENSE}</p>
+        <ul class="site-footer__links" aria-label="Social links">
+			{SOCIAL_LINKS.map((link) => (
+                    <li><a href={link.url} rel="noreferrer">{link.label}</a></li>
+			))}
+        </ul>
+    </div>
+</footer>

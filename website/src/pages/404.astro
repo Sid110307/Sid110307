@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase, getCanonicalUrl } from "../utils";
+---
+
+<BaseLayout title="Page not found"
+            description="The page you were looking for could not be found."
+            canonical={getCanonicalUrl("/404.html")}>
+    <section class="site-shell hero">
+        <div class="hero__copy">
+            <p class="section__eyebrow">404</p>
+            <h1>Page not found</h1>
+            <p class="hero__lede">The page you were looking for could not be found.</p>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href={withBase("/")}>Go home</a>
+                <a class="btn" href={withBase("/projects/")}>Projects</a>
+                <a class="btn" href={withBase("/posts/")}>Blog</a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

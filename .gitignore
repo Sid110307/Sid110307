@@ -1,10 +1,7 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+website/node_modules/
+website/dist/
+website/.astro/
 
-Gemfile.lock
 .DS_Store
 Thumbs.db
 

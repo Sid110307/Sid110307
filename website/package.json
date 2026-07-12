@@ -1,0 +1,21 @@
+{
+    "name": "sid110307",
+    "version": "1.0.0",
+    "author": "Sid110307",
+    "type": "module",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "@astrojs/rss": "^4.0.19",
+        "@astrojs/sitemap": "^3.7.3",
+        "astro": "^7.0.7",
+        "prismjs": "^1.30.0"
+    },
+    "devDependencies": {
+        "@astrojs/check": "^0.9.9",
+        "typescript": "^7.0.2"
+    }
+}

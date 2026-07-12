@@ -1,4 +1,4 @@
-name: Build and Deploy Jekyll site to GitHub Pages
+name: Build and Deploy site to GitHub Pages
 on:
   push:
     branches: [ master ]
@@ -15,21 +15,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.4"
-          bundler-cache: true
+        uses: actions/checkout@v7
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --source website --destination _site --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: latest
+          cache: pnpm
+          cache-dependency-path: website/pnpm-lock.yaml
+      - name: Install dependencies
+        working-directory: website
+        run: pnpm install
+      - name: Build
+        working-directory: website
+        run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: website/dist
   deploy:
     environment:
       name: github-pages

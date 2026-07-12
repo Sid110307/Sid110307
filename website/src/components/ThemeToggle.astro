@@ -1,0 +1,41 @@
+<button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-label="Toggle color theme"
+        aria-pressed="false"
+>
+    <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+    <span data-theme-toggle-label>Dark</span>
+</button>
+
+<script is:inline>
+	const storageKey = "theme";
+	const root = document.documentElement;
+	const button = document.querySelector("[data-theme-toggle]");
+	const label = document.querySelector("[data-theme-toggle-label]");
+	const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+	const applyTheme = (theme) => {
+		const resolved = theme === "dark" || theme === "light"
+			? theme
+			: (prefersDark.matches ? "dark" : "light");
+		root.dataset.theme = resolved;
+		if (button) button.setAttribute("aria-pressed", resolved === "dark" ? "true" : "false");
+		if (label) label.textContent = resolved === "dark" ? "Light" : "Dark";
+	};
+
+	const stored = localStorage.getItem(storageKey);
+	applyTheme(stored);
+
+	button?.addEventListener("click", () => {
+		const next = root.dataset.theme === "dark" ? "light" : "dark";
+		root.dataset.theme = next;
+		localStorage.setItem(storageKey, next);
+		applyTheme(next);
+	});
+
+	prefersDark.addEventListener("change", () => {
+		if (!localStorage.getItem(storageKey)) applyTheme(undefined);
+	});
+</script>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sid110307.github.io/Sid110307/sitemap-index.xml

@@ -1,0 +1,28 @@
+export interface Publication {
+	title: string;
+	number: string;
+	date: string;
+	authors: string[];
+}
+
+export const PUBLICATIONS: Publication[] = [
+	{
+		title: "Biomimetic Conjugated Molecule-Based Sensor for Sodium Ion in Sweat Using Microfluidics Wearable Device Architecture for Real-Time Detection",
+		number: "MS-MAT-2024-105",
+		date: "August 9, 2024",
+		authors: [
+			"Praveen C Ramamurthy",
+			"Pavithra Narasimhappa",
+			"Sushant Kumar Behera",
+			"Radhika Varshney",
+			"Retinder Kour",
+			"Simranjeet Singh",
+			"Vishakha Chauhan",
+			"Ashutosh C Panchal",
+			"Aman Thakur",
+			"Siddharth Praveen Bharadwaj",
+			"Yash Bajpai",
+			"T.S. Sunil Kumar Naik",
+		],
+	},
+];

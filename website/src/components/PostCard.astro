@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatDate, getReadingTime } from "../utils";
+import { withBase } from "../utils";
+
+interface Props {
+	post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props as Props;
+const { title, description, publishDate, category, tags } = post.data;
+const readingTime = getReadingTime(post.body);
+---
+
+<article class="post-card">
+    <a style="text-decoration: none; color: inherit;" href={withBase(`/posts/${post.id}/`)}>
+        <h3 class="post-card__title">{title}</h3>
+        <p class="post-card__meta">
+            <time datetime={publishDate.toISOString()}>{formatDate(publishDate)}</time>
+			{category ? <span> · {category}</span> : null}
+            <span> · {readingTime} min read</span>
+        </p>
+        <p class="post-card__description">{description}</p>
+		{tags.length ? (
+                <ul class="tag-list" aria-label={`${title} tags`}>
+					{tags.map((tag) =>
+                            <li class="tag">{tag}</li>)}
+                </ul>
+		) : null}
+    </a>
+</article>
