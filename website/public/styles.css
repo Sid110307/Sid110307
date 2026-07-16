@@ -104,6 +104,10 @@ button {
     font: inherit;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 main {
     display: block;
 }
@@ -164,6 +168,7 @@ main {
 
 .site-header__actions {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.6rem;
 }
@@ -296,6 +301,17 @@ main {
     padding: 0;
 }
 
+.tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.9rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    font-size: 0.92rem;
+}
+
 .hero__actions {
     display: flex;
     flex-wrap: wrap;
@@ -308,7 +324,7 @@ main {
     gap: 0.45rem;
     min-height: 2.7rem;
     padding: 0.55rem 1rem;
-    border-radius: 999px;
+    border-radius: 0.75rem;
     text-decoration: none;
     border: 1px solid var(--border);
     background: var(--bg-elevated);
@@ -319,16 +335,6 @@ main {
     background: var(--accent);
     border-color: color-mix(in srgb, var(--accent) 80%, black);
     color: #fff;
-}
-
-.hero__avatar-wrap {
-    display: grid;
-    justify-items: center;
-    gap: 0.8rem;
-    padding: 1rem;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--bg-soft);
 }
 
 .hero__avatar {
@@ -380,7 +386,6 @@ main {
     text-decoration: none;
 }
 
-.project-card__meta,
 .post-card__meta,
 .publication-card__meta,
 .experience-entry__meta {

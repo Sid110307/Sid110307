@@ -2,12 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import PublicationCard from "../components/PublicationCard.astro";
-import { AUTHOR, PRIVATE_PROJECTS, GITHUB_STATS, SITE_DESCRIPTION } from "../data/site";
+import SocialIcon from "../components/Social";
+import { AUTHOR, PRIVATE_PROJECTS, GITHUB_STATS, SOCIAL_LINKS, SITE_DESCRIPTION } from "../data/site";
 import { PROJECTS, FEATURED_PROJECTS } from "../data/projects";
 import { EXPERIENCE } from "../data/experience";
 import { PUBLICATIONS } from "../data/publications";
-import { withBase } from "../utils";
-import { getCanonicalUrl } from "../utils";
+import { withBase, getCanonicalUrl } from "../utils";
 
 const allProjects = PROJECTS.flatMap((section) => section.projects);
 const featured = FEATURED_PROJECTS.map((name) => allProjects.find((project) => project.name === name)).filter((project): project is (typeof allProjects)[number] => Boolean(project));
@@ -32,29 +32,27 @@ const firstPublication = PUBLICATIONS[0];
     <section class="site-shell hero">
         <div class="hero__copy">
             <div class="hero__intro">
-                <p class="section__eyebrow">India · {AUTHOR.username}</p>
                 <h1>Hey, I&apos;m Siddharth</h1>
                 <p class="hero__lede">{SITE_DESCRIPTION}</p>
                 <p class="hero__lede">I focus on embedded systems, hardware and PCB development, operating systems and
                     emulation, languages, interpreters, and compilers, and mobile and full-stack development.</p>
             </div>
             <div class="hero__actions" aria-label="Social links">
-                <a class="btn" href="https://github.com/Sid110307">GitHub</a>
-                <a class="btn" href="https://linkedin.com/in/sid110307">LinkedIn</a>
-                <a class="btn" href="https://x.com/CoolorFoolSRS">X/Twitter</a>
-                <a class="btn" href="https://dev.to/@sid110307">DEV Community</a>
+                {SOCIAL_LINKS.map((link) => (
+                        <a class="btn" href={link.url} target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <SocialIcon label={link.label} />
+                            {link.label}
+                        </a>
+                ))}
             </div>
         </div>
-        <div class="hero__avatar-wrap">
-            <img class="hero__avatar"
-                 src={AUTHOR.avatar}
-                 alt={`${AUTHOR.name} avatar`}
-                 width="240"
-                 height="240"
-                 loading="eager"
-                 decoding="async" />
-            <p class="hero__avatar-caption">{AUTHOR.name}</p>
-        </div>
+        <img class="hero__avatar"
+                src={AUTHOR.avatar}
+                alt={`${AUTHOR.name} avatar`}
+                width="240"
+                height="240"
+                loading="eager"
+                decoding="async" />
     </section>
     <section class="site-shell section">
         <p class="section__eyebrow">

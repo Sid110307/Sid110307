@@ -1,5 +1,5 @@
 export const SITE_TITLE = "Siddharth Praveen Bharadwaj";
-export const SITE_DESCRIPTION = "Systems and embedded developer working on operating systems, virtual machines, embedded devices and full-stack applications.";
+export const SITE_DESCRIPTION = "Systems and embedded developer working on operating systems, virtual machines, and full-stack applications.";
 export const SITE_URL = "https://sid110307.github.io";
 
 export const AUTHOR = {
@@ -7,14 +7,14 @@ export const AUTHOR = {
 	username: "Sid110307",
 	email: "siddharthpb2007@gmail.com",
 	avatar: "https://avatars.githubusercontent.com/u/67900745",
-	bio: "Systems and embedded developer working on operating systems, virtual machines, embedded devices and full-stack applications.",
+	bio: SITE_DESCRIPTION,
 };
-export const LICENSE = "© 2025-Present Sid110307. All content under MIT license unless otherwise stated.";
+export const LICENSE = "© 2025-Present Sid110307";
 export const GOOGLE_SITE_VERIFICATION = "4GuCcJQhlsmrDinyVqD3GJNlK-0CgE6ZL334w8HxPuU";
 export const SOCIAL_LINKS = [
 	{ label: "GitHub", url: "https://github.com/Sid110307" },
 	{ label: "LinkedIn", url: "https://linkedin.com/in/sid110307" },
-	{ label: "Twitter", url: "https://x.com/CoolorFoolSRS" },
+	{ label: "X/Twitter", url: "https://x.com/CoolorFoolSRS" },
 	{ label: "DEV Community", url: "https://dev.to/@sid110307" },
 ];
 

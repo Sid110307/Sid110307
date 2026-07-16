@@ -1,41 +1,72 @@
-<button
-        type="button"
-        class="theme-toggle"
-        data-theme-toggle
-        aria-label="Toggle color theme"
-        aria-pressed="false"
->
-    <span class="theme-toggle__icon" aria-hidden="true">☾</span>
-    <span data-theme-toggle-label>Dark</span>
-</button>
+---
+import { BiSun, BiMoon } from "react-icons/bi";
+---
 
-<script is:inline>
+<button
+	type="button"
+	class="theme-toggle"
+	data-theme-toggle
+	aria-label="Switch to dark theme"
+>
+	<span class="theme-toggle__icon" data-theme-toggle-icon aria-hidden="true">
+		<span data-theme-icon="moon"><BiMoon /></span>
+		<span data-theme-icon="sun" hidden><BiSun /></span>
+	</span>
+	<span data-theme-toggle-label>Dark</span>
+</button>
+<script>
 	const storageKey = "theme";
 	const root = document.documentElement;
 	const button = document.querySelector("[data-theme-toggle]");
 	const label = document.querySelector("[data-theme-toggle-label]");
+	const moonIcon = document.querySelector('[data-theme-icon="moon"]');
+	const sunIcon = document.querySelector('[data-theme-icon="sun"]');
 	const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-	const applyTheme = (theme) => {
-		const resolved = theme === "dark" || theme === "light"
-			? theme
-			: (prefersDark.matches ? "dark" : "light");
-		root.dataset.theme = resolved;
-		if (button) button.setAttribute("aria-pressed", resolved === "dark" ? "true" : "false");
-		if (label) label.textContent = resolved === "dark" ? "Light" : "Dark";
+	const getStoredTheme = () => {
+		try {
+			const value = localStorage.getItem(storageKey);
+			return value === "dark" || value === "light" ? value : null;
+		} catch (error) {
+			console.warn("Error:", error);
+			return null;
+		}
 	};
 
-	const stored = localStorage.getItem(storageKey);
-	applyTheme(stored);
+	const storedTheme = getStoredTheme();
+	root.dataset.theme = storedTheme ?? (prefersDark.matches ? "dark" : "light");
 
+	const applyTheme = (theme) => {
+		const resolvedTheme =
+			theme ?? (prefersDark.matches ? "dark" : "light");
+		const isDark = resolvedTheme === "dark";
+		const nextTheme = isDark ? "light" : "dark";
+
+		root.dataset.theme = resolvedTheme;
+		button?.setAttribute(
+			"aria-label",
+			`Switch to ${nextTheme} theme`,
+		);
+
+		if (label) label.textContent = isDark ? "Light" : "Dark";
+		if (moonIcon) moonIcon.hidden = isDark;
+		if (sunIcon) sunIcon.hidden = !isDark;
+	};
+
+	applyTheme(getStoredTheme());
 	button?.addEventListener("click", () => {
-		const next = root.dataset.theme === "dark" ? "light" : "dark";
-		root.dataset.theme = next;
-		localStorage.setItem(storageKey, next);
-		applyTheme(next);
+		const nextTheme =
+			root.dataset.theme === "dark" ? "light" : "dark";
+
+		try {
+			localStorage.setItem(storageKey, nextTheme);
+		} catch (error) {
+			console.warn("Error:", error);
+		}
+		applyTheme(nextTheme);
 	});
 
 	prefersDark.addEventListener("change", () => {
-		if (!localStorage.getItem(storageKey)) applyTheme(undefined);
+		if (!getStoredTheme()) applyTheme(null);
 	});
 </script>

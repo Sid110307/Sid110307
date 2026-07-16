@@ -6,17 +6,12 @@ interface Props {
 }
 
 const { project } = Astro.props as Props;
-const hostname = new URL(project.url).hostname.replace(/^www\./, "");
 ---
 
 <article class="project-card">
     <h3 class="project-card__title">
-        <a href={project.url}>
-			{project.name}
-            <span class="visually-hidden"> on {hostname}</span>
-        </a>
+        <a href={project.url}>{project.name}</a>
     </h3>
-    <p class="project-card__meta">{hostname}</p>
     <p class="project-card__description">{project.description}</p>
     <ul class="tag-list" aria-label={`${project.name} technologies`}>
 		{project.technologies.map((technology) => (

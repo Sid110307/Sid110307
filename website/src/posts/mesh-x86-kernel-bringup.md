@@ -106,17 +106,17 @@ Each structure has an identifier according to the protocol and the response poin
 
 The requests are used by different parts of the kernel:
 
-| Request                 | Information provided                                         | Used by                                 |
-|-------------------------|--------------------------------------------------------------|-----------------------------------------|
-| framebuffer_request     | Address, dimensions, pitch and pixel format                  | Framebuffer renderer                    |
-| memmap_request          | Usable, reserved, ACPI and bootloader-owned physical regions | Physical frame allocator                |
-| hhdm_request            | Offset of the higher-half direct mapping                     | Page-table and MMIO access              |
-| executable_addr_request | Physical and virtual kernel load bases                       | Kernel section remapping                |
-| mp_request              | CPU count, LAPIC IDs and AP startup records                  | SMP init                                |
-| date_at_boot_request    | Timestamp supplied during boot                               | Diagnostic output                       |
-| rsdp_request            | ACPI root-system-description pointer                         | MADT and interrupt-controller discovery |
-| executable_file_request | Loaded kernel-file metadata                                  | Boot information and diagnostics        |
-| module_request          | Files loaded alongside the kernel                            | Future module or filesystem support     |
+| Request                   | Information provided                                         | Used by                                 |
+|---------------------------|--------------------------------------------------------------|-----------------------------------------|
+| `framebuffer_request`     | Address, dimensions, pitch and pixel format                  | Framebuffer renderer                    |
+| `memmap_request`          | Usable, reserved, ACPI and bootloader-owned physical regions | Physical frame allocator                |
+| `hhdm_request`            | Offset of the higher-half direct mapping                     | Page-table and MMIO access              |
+| `executable_addr_request` | Physical and virtual kernel load bases                       | Kernel section remapping                |
+| `mp_request`              | CPU count, LAPIC IDs and AP startup records                  | SMP init                                |
+| `date_at_boot_request`    | Timestamp supplied during boot                               | Diagnostic output                       |
+| `rsdp_request`            | ACPI root-system-description pointer                         | MADT and interrupt-controller discovery |
+| `executable_file_request` | Loaded kernel-file metadata                                  | Boot information and diagnostics        |
+| `module_request`          | Files loaded alongside the kernel                            | Future module or filesystem support     |
 
 Not every response is required immediately. For example, `module_request` is present even though there is no userland
 image loaded or any filesystem implemented.
@@ -155,11 +155,7 @@ It maps the physical memory directly while the kernel page tables and VMM define
 
 ### Physical and virtual kernel addresses
 
-Mesh is linked as a higher-half kernel. Its linker script places the kernel at:
-
-```text
-0xFFFFFFFF80000000
-```
+Mesh is linked as a higher-half kernel. Its linker script places the kernel at `0xFFFFFFFF80000000`.
 
 The address supplied by the executable-address response allows the kernel to calculate the difference between its linked
 virtual address and the physical location at which it was loaded:
