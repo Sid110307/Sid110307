@@ -64,6 +64,18 @@ const firstPublication = PUBLICATIONS[0];
         </div>
     </section>
     <section class="site-shell section">
+        <p class="section__eyebrow">Private / internal projects</p>
+        <p class="section__description">Some source code is private because of organizational or other constraints.</p>
+        <div class="card-grid">
+			{PRIVATE_PROJECTS.map((project) => (
+                    <article class="project-card">
+                        <h3 class="project-card__title"><a href={project.url}>{project.name}</a></h3>
+                        <p class="project-card__description">{project.description}</p>
+                    </article>
+			))}
+        </div>
+    </section>
+    <section class="site-shell section">
         <p class="section__eyebrow">
             <a style="text-decoration: none; color: inherit;" href={withBase("/experience/")}>Current experience</a>
         </p>
@@ -89,18 +101,6 @@ const firstPublication = PUBLICATIONS[0];
         <div class="card-grid">
 			{firstPublication ?
                     <PublicationCard publication={firstPublication} /> : null}
-        </div>
-    </section>
-    <section class="site-shell section">
-        <p class="section__eyebrow">Private / internal projects</p>
-        <p class="section__description">Some source code is private because of organizational or other constraints.</p>
-        <div class="card-grid">
-			{PRIVATE_PROJECTS.map((project) => (
-                    <article class="project-card">
-                        <h3 class="project-card__title"><a href={project.url}>{project.name}</a></h3>
-                        <p class="project-card__description">{project.description}</p>
-                    </article>
-			))}
         </div>
     </section>
     <section class="site-shell section">

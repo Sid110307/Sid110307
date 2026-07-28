@@ -78,8 +78,14 @@ export const PROJECTS: ProjectSection[] = [
 		projects: [
 			{
 				name: "SmartMoisture",
-				url: "https://github.com/Sid110307/SmartMoisture",
+				url: "https://github.com/Sid110307/Indriya-App/tree/master/app/src/main/java/com/indriya/one/core/app/moisture",
 				description: "BLE moisture sensor app with custom equation support to transform raw values",
+				technologies: ["Kotlin", "Android"],
+			},
+			{
+				name: "SpectralMapper",
+				url: "https://github.com/Sid110307/Indriya-App/tree/master/app/src/main/java/com/indriya/one/core/app/spectral",
+				description: "App for visualizing and analyzing IR spectral data",
 				technologies: ["Kotlin", "Android"],
 			},
 			{
@@ -260,4 +266,4 @@ export const PROJECTS: ProjectSection[] = [
 	},
 ];
 
-export const FEATURED_PROJECTS = ["Mesh", "SmartMoisture", "quarklang-vm", "AxiLang", "ShadowDoom", "FBGraphics"];
+export const FEATURED_PROJECTS = ["Mesh", "SmartMoisture-MSP430", "quarklang-vm", "AxiLang", "ShadowDoom", "FBGraphics"];

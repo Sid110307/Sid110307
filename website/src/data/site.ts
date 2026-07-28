@@ -31,8 +31,8 @@ export const PRIVATE_PROJECTS = [
 		description: "Geospatial tree mapping tool for environmental research with on-device AI and offline-first support.",
 	},
 	{
-		name: "SmartMoisture",
-		url: "https://github.com/Sid110307/SmartMoisture",
+		name: "SmartMoisture-MSP430",
+		url: "https://github.com/Sid110307/SmartMoisture-MSP430",
 		description: "BLE soil moisture sensor and temperature sensor project using TI MSP430 MCU.",
 	},
 	{

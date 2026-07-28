@@ -41,7 +41,7 @@ A few of my open-source projects across my focus areas:
 - [Ankura](https://ankura.netlify.app) - A Community-Powered Sapling Rescue Platform
 - [TreeMap](https://github.com/Sid110307/TreeMap) - Geospatial tree mapping tool for environmental research with
   on-device AI and offline-first support
-- [SmartMoisture](https://github.com/Sid110307/SmartMoisture) - BLE soil moisture sensor + temperature sensor project
+- [SmartMoisture-MSP430](https://github.com/Sid110307/SmartMoisture-MSP430) - BLE soil moisture sensor + temperature sensor project
   using TI MSP430 MCU
 - [PVDashboard](https://github.com/Sid110307/PVDashboard) - Real-time photovoltaic monitoring dashboard for PV
   reliability test bed
