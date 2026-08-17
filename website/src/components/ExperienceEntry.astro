@@ -5,18 +5,31 @@ interface Props {
 	entry: ExperienceEntryType;
 }
 
-const { entry } = Astro.props as Props;
+const { entry, current = false } = Astro.props;
 ---
 
-<article class="experience-entry">
-    <h3 class="experience-entry__title">{entry.title}</h3>
-    <p class="experience-entry__meta">
-        <strong>{entry.organization}</strong><br />
-        <time>{entry.date}</time>
-    </p>
-    <ul class="experience-entry__bullets">
-		{entry.bullets.map((bullet) => (
+<article class:list={["timeline-entry", { "timeline-entry--current": current }]}>
+    <div class="timeline-entry__marker" aria-hidden="true">
+        <span class="timeline-entry__dot"></span>
+    </div>
+    <div class="timeline-entry__content">
+        <header class="timeline-entry__header">
+            <div>
+                <h3 class="timeline-entry__title">
+                    {entry.title}
+                </h3>
+                <p class="timeline-entry__organization">
+                    {entry.organization}
+                </p>
+            </div>
+            <span class="timeline-entry__date">
+                {entry.date}
+            </span>
+        </header>
+        <ul class="timeline-entry__bullets">
+            {entry.bullets.map((bullet) => (
                 <li>{bullet}</li>
-		))}
-    </ul>
+            ))}
+        </ul>
+    </div>
 </article>

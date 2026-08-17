@@ -77,20 +77,40 @@ const firstPublication = PUBLICATIONS[0];
     </section>
     <section class="site-shell section">
         <p class="section__eyebrow">
-            <a style="text-decoration: none; color: inherit;" href={withBase("/experience/")}>Current experience</a>
+            <a
+                class="section-link"
+                href={withBase("/experience/")}
+            >
+                Current experience
+            </a>
         </p>
-        <div class="card-grid">
-			{EXPERIENCE.map((entry) => (
-                    <article class="experience-entry">
-                        <h3 class="experience-entry__title">{entry.title}</h3>
-                        <p class="experience-entry__meta"><strong>{entry.organization}</strong><br />{entry.date}</p>
-                        <ul class="experience-entry__bullets">
-							{entry.bullets.map((bullet) => (
-                                    <li>{bullet}</li>
-							))}
+        <div class="experience-timeline">
+            {EXPERIENCE.map((entry, index) => (
+                <article class="timeline-entry">
+                    <div class="timeline-entry__marker" aria-hidden="true">
+                        <span class="timeline-entry__dot"></span>
+                    </div>
+                    <div class="timeline-entry__content">
+                        <div class="timeline-entry__header">
+                            <div>
+                                <h3 class="timeline-entry__title">{entry.title}</h3>
+                                <p class="timeline-entry__organization">
+                                    {entry.organization}
+                                </p>
+                            </div>
+
+                            <time class="timeline-entry__date">
+                                {entry.date}
+                            </time>
+                        </div>
+                        <ul class="timeline-entry__bullets">
+                            {entry.bullets.map((bullet) => (
+                                <li>{bullet}</li>
+                            ))}
                         </ul>
-                    </article>
-			))}
+                    </div>
+                </article>
+            ))}
         </div>
     </section>
     <section class="site-shell section">

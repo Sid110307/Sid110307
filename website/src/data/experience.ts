@@ -159,14 +159,12 @@ export const SKILLS: SkillGroup[] = [
 export const EXPERIENCE: ExperienceEntry[] = [
 	{
 		title: "Chief Technology Officer",
-		organization: "HustleX (XElite Studios Pvt. Ltd.)",
-		date: "Mar 2022 - Present",
+		organization: "Innpact Ventures Pvt. Ltd.",
+		date: "Apr 2025 - Present",
 		bullets: [
-			"Led backend and frontend development across multiple products with full-stack integration.",
-			"Designed mobile apps using React Native with Node.js and PostgreSQL backend, using Supabase for authentication and database management.",
-			"Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform infrastructure.",
-			"Built real-time pub-sub systems using WebSockets and REST APIs.",
-			"Grew user base to ~20% monthly active users (MAU) with ~300 users.",
+			"Led development of a portable uroflowmetry system for real-time flow measurement, automated analysis, patient data logging, and remote monitoring.",
+			"Developed low-power, non-invasive infant monitoring systems for apnea, movement, and bed-fall detection.",
+			"Designed flexible sensor-integrated knee wearable for gait analysis, physiotherapy, and rehabilitation monitoring.",
 		],
 	},
 	{
@@ -178,6 +176,18 @@ export const EXPERIENCE: ExperienceEntry[] = [
 			"Developed a real-time photovoltaic (PV) dashboard with data logging, live analytics, and interactive graphs.",
 			"Implemented full-stack architecture using React, Next.js, MySQL, and visualization libraries like Apache ECharts for monitoring data.",
 			"Developed a pipeline to improve latency for fetching of large datasets (1M+ data points under 500ms).",
+		],
+	},
+	{
+		title: "Chief Technology Officer",
+		organization: "HustleX (XElite Studios Pvt. Ltd.)",
+		date: "Mar 2022 - Present",
+		bullets: [
+			"Led backend and frontend development across multiple products with full-stack integration.",
+			"Designed mobile apps using React Native with Node.js and PostgreSQL backend, using Supabase for authentication and database management.",
+			"Implemented CI/CD pipelines using GitHub Actions and Google Cloud Platform infrastructure.",
+			"Built real-time pub-sub systems using WebSockets and REST APIs.",
+			"Grew user base to ~20% monthly active users (MAU) with ~300 users.",
 		],
 	},
 ];
