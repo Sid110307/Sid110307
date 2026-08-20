@@ -10,7 +10,7 @@ import { BiSun, BiMoon } from "react-icons/bi";
 >
 	<span class="theme-toggle__icon" data-theme-toggle-icon aria-hidden="true">
 		<span data-theme-icon="moon"><BiMoon /></span>
-		<span data-theme-icon="sun" hidden><BiSun /></span>
+		<span data-theme-icon="sun" class="is-hidden"><BiSun /></span>
 	</span>
 	<span data-theme-toggle-label>Dark</span>
 </button>
@@ -49,8 +49,8 @@ import { BiSun, BiMoon } from "react-icons/bi";
 		);
 
 		if (label) label.textContent = isDark ? "Light" : "Dark";
-		if (moonIcon) moonIcon.hidden = isDark;
-		if (sunIcon) sunIcon.hidden = !isDark;
+		if (moonIcon) moonIcon.classList.toggle("is-hidden", isDark);
+		if (sunIcon) sunIcon.classList.toggle("is-hidden", !isDark);
 	};
 
 	applyTheme(getStoredTheme());
