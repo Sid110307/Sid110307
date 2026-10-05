@@ -59,7 +59,7 @@ const firstPublication = PUBLICATIONS[0];
         </p>
         <div class="card-grid">
 			{featured.map((project) =>
-                    <ProjectCard project={project} />)}
+                    <ProjectCard project={project} noTags />)}
         </div>
         <p><a href={withBase("/projects/")}>Browse all projects →</a></p>
     </section>

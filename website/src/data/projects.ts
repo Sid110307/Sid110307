@@ -348,4 +348,4 @@ export const PROJECTS: ProjectSection[] = [
 	})).filter((section) => section.projects.length > 0),
 ];
 
-export const FEATURED_PROJECTS = ["Ankura", "Uroflowmetry", "Mesh", "UrbanFlow", "schema-cms", "HustleX"];
+export const FEATURED_PROJECTS = ["Mesh", "schema-cms", "SmartMoisture-MSP430", "TreeMap", "UrbanFlow", "Uroflowmetry"];
