@@ -1,21 +1,24 @@
 ---
-import type { Project } from "../data/projects";
+import type { Project, ProjectArea } from "../data/projects";
 
 interface Props {
 	project: Project;
+	area?: ProjectArea;
 }
 
-const { project } = Astro.props as Props;
+const { project, area } = Astro.props as Props;
 ---
 
-<article class="project-card">
+<article class="project-card" data-project-item={area ? "true" : undefined} data-area={area}>
     <h3 class="project-card__title">
         <a href={project.url}>{project.name}</a>
     </h3>
     <p class="project-card__description">{project.description}</p>
-    <ul class="tag-list" aria-label={`${project.name} technologies`}>
-		{project.technologies.map((technology) => (
+    {project.technologies?.length ? (
+        <ul class="tag-list" aria-label={`${project.name} technologies`}>
+            {project.technologies.map((technology) => (
                 <li class="tag">{technology}</li>
-		))}
-    </ul>
+            ))}
+        </ul>
+    ) : null}
 </article>

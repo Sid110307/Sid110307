@@ -1,30 +1,137 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { PROJECTS } from "../data/projects";
+import { PROJECTS, README_SECTION_COUNT } from "../data/projects";
+import type { ProjectArea } from "../data/projects";
 import { getCanonicalUrl, slugify } from "../utils";
 
-const description = "Selected projects spanning operating systems, compilers, mobile apps, graphics, AI/ML, and tools.";
+const description = "Projects spanning citizen science, geospatial software, embedded systems, scientific instruments, operating systems, developer tools, and full-stack apps.";
+const selectedSections = PROJECTS.slice(0, README_SECTION_COUNT - 1);
+const olderSection = PROJECTS[README_SECTION_COUNT - 1];
+const archiveSections = PROJECTS.slice(README_SECTION_COUNT);
+const archiveCount = archiveSections.reduce((count, section) => count + section.projects.length, 0);
+const projectCount = PROJECTS.reduce((count, section) => count + section.projects.length, 0);
+const filters: { label: string; value: "all" | ProjectArea }[] = [
+    { label: "All", value: "all" },
+    { label: "Geospatial", value: "geospatial" },
+    { label: "Embedded", value: "embedded" },
+    { label: "Systems", value: "systems" },
+    { label: "Apps", value: "apps" },
+    { label: "Creative", value: "creative" },
+    { label: "Other", value: "other" },
+];
 ---
 
 <BaseLayout title="Projects" description={description} canonical={getCanonicalUrl("/projects/")}>
     <section class="site-shell section">
         <p class="section__eyebrow">Projects</p>
-        <h1 class="section__title">Selected projects</h1>
-        <p>{description}</p>
-        <div class="stack">
-			{PROJECTS.map((section) => (
-                    <section id={slugify(section.title)} class="stack">
-                        <div>
-                            <h2>{section.title}</h2>
-                            <p>{section.description}</p>
-                        </div>
-                        <div class="card-grid">
-							{section.projects.map((project) =>
-                                    <ProjectCard project={project} />)}
-                        </div>
-                    </section>
-			))}
+        <h1 class="section__title">Projects</h1>
+        <p>{description} Browse {projectCount} projects, including {archiveCount} in the archive.</p>
+        <div class="project-filters" data-project-filters hidden>
+            <p class="project-filters__label">Filter by area</p>
+            <div class="project-filters__buttons" role="group" aria-label="Filter projects by area">
+                {filters.map((filter) => (
+                    <button type="button" data-project-filter={filter.value} aria-pressed={filter.value === "all"}>
+                        {filter.label}
+                    </button>
+                ))}
+            </div>
+            <p class="project-filters__status" data-project-filter-status role="status" aria-live="polite"></p>
+        </div>
+        <div class="stack project-sections">
+            {selectedSections.map((section) => (
+                <section id={slugify(section.title)} class="stack" data-project-section>
+                    <div>
+                        <h2>{section.title}</h2>
+                        <p>{section.description}</p>
+                    </div>
+                    <div class="card-grid">
+                        {section.projects.map((project) => (
+                            <ProjectCard project={project} area={project.area ?? section.area} />
+                        ))}
+                    </div>
+                </section>
+            ))}
+            {olderSection && (
+                <section id="older-projects" class="stack" data-project-section>
+                    <div>
+                        <h2>Older projects</h2>
+                        <p>{olderSection.description}</p>
+                    </div>
+                    <ul class="project-list">
+                        {olderSection.projects.map((project) => (
+                            <li data-project-item data-area={project.area ?? olderSection.area}>
+                                <a href={project.url}>{project.name}</a>
+                                <span>{project.description}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+            <details id="archive" class="project-archive" data-project-archive>
+                <summary>
+                    <h2 class="project-archive__title">Project archive</h2>
+                    <span class="project-archive__count">{archiveCount} additional projects and experiments</span>
+                </summary>
+                <div class="stack project-archive__sections">
+                    {archiveSections.map((section) => (
+                        <section id={slugify(section.title)} class="stack" data-project-section>
+                            <div>
+                                <h3>{section.title.replace(/^More: /, "")}</h3>
+                                <p>{section.description}</p>
+                            </div>
+                            <ul class="project-list">
+                                {section.projects.map((project) => (
+                                    <li data-project-item data-area={project.area ?? section.area}>
+                                        <a href={project.url}>{project.name}</a>
+                                        <span>{project.description}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ))}
+                </div>
+            </details>
         </div>
     </section>
 </BaseLayout>
+
+<script>
+    const filterPanel = document.querySelector<HTMLElement>("[data-project-filters]");
+    const archive = document.querySelector<HTMLDetailsElement>("[data-project-archive]");
+    const filterButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-project-filter]"));
+    const projectItems = Array.from(document.querySelectorAll<HTMLElement>("[data-project-item]"));
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-project-section]"));
+    const status = document.querySelector<HTMLElement>("[data-project-filter-status]");
+
+    if (filterPanel && archive && status) {
+        filterPanel.hidden = false;
+
+        for (const button of filterButtons) {
+            button.addEventListener("click", () => {
+                const area = button.dataset.projectFilter;
+                if (!area) return;
+
+                for (const item of projectItems) {
+                    item.hidden = area !== "all" && item.dataset.area !== area;
+                }
+                for (const section of sections) {
+                    section.hidden = !section.querySelector("[data-project-item]:not([hidden])");
+                }
+                for (const option of filterButtons) {
+                    option.setAttribute("aria-pressed", String(option === button));
+                }
+
+                const archiveHasMatches = !!archive.querySelector("[data-project-item]:not([hidden])");
+                archive.hidden = !archiveHasMatches;
+                if (area !== "all" && archiveHasMatches) archive.open = true;
+
+                const count = projectItems.filter((item) => !item.hidden).length;
+                status.textContent = area === "all"
+                    ? `${count} projects available; ${archive.querySelectorAll("[data-project-item]").length} in the archive.`
+                    : `${count} ${button.textContent?.trim().toLowerCase()} projects`;
+            });
+        }
+        filterButtons[0]?.click();
+    }
+</script>

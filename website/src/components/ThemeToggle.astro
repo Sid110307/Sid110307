@@ -36,7 +36,7 @@ import { BiSun, BiMoon } from "react-icons/bi";
 	const storedTheme = getStoredTheme();
 	root.dataset.theme = storedTheme ?? (prefersDark.matches ? "dark" : "light");
 
-	const applyTheme = (theme) => {
+	const applyTheme = (theme: "dark" | "light" | null) => {
 		const resolvedTheme =
 			theme ?? (prefersDark.matches ? "dark" : "light");
 		const isDark = resolvedTheme === "dark";

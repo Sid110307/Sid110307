@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "../data/site";
 
-export const GET = async (context: { site?: URL }) => {
+export const GET = async () => {
 	const posts = (await getCollection("posts", ({ data }) => !data.draft))
 		.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 	return rss({

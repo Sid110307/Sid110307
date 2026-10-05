@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "astro dev",
+        "check": "astro check",
         "build": "astro build",
         "preview": "astro preview"
     },
@@ -22,6 +23,6 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
-        "typescript": "^7.0.2"
+        "typescript": "6.0.3"
     }
 }

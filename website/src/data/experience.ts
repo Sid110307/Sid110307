@@ -23,7 +23,7 @@ export const SKILLS: SkillGroup[] = [
 			{ name: "JavaScript" },
 			{ name: "TypeScript" },
 			{ name: "Bash" },
-			{ name: "x86 Assembly (basic)" },
+			{ name: "x86 Assembly" },
 		],
 	},
 	{
@@ -35,8 +35,6 @@ export const SKILLS: SkillGroup[] = [
 			{ name: "Node.js" },
 			{ name: "Expo" },
 			{ name: "Android SDK" },
-			{ name: "Vue (basic)" },
-			{ name: "Angular (basic)" },
 			{ name: "EJS" },
 			{ name: "Tailwind CSS" },
 			{ name: "Bootstrap" },

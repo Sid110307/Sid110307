@@ -1,11 +1,3 @@
-import type React from "react";
-import {
-  BiLogoGithub,
-  BiLogoLinkedin,
-  BiLogoTwitter,
-  BiLogoDevTo,
-} from "react-icons/bi";
-
 const BASE = "/Sid110307";
 
 export const withBase = (path: string): string => path.startsWith(BASE) ? path : path === "/" ? BASE + "/" : path.startsWith("/") ? BASE + path : BASE + "/" + path;
@@ -29,7 +21,8 @@ export const formatDate = (date: Date | string): string => {
 	}).format(d);
 };
 
-export const getReadingTime = (content: string): number => {
+export const getReadingTime = (content: string | undefined): number => {
 	const wordsPerMinute = 200;
-	return Math.ceil(content.trim().split(/\s+/).length / wordsPerMinute);
+	const words = content?.trim().split(/\s+/).filter(Boolean).length ?? 0;
+	return Math.max(1, Math.ceil(words / wordsPerMinute));
 };

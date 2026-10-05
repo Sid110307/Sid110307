@@ -288,6 +288,116 @@ main {
     text-decoration: none;
 }
 
+.project-filters {
+    margin: 1.5rem 0 2rem;
+}
+
+.project-filters__label {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.project-filters__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-filters__buttons button {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.4rem 0.75rem;
+    color: var(--text);
+    background: var(--bg-elevated);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.project-filters__buttons button:hover,
+.project-filters__buttons button:focus-visible {
+    border-color: var(--accent);
+}
+
+.project-filters__buttons button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-weak);
+}
+
+.project-filters__status {
+    margin: 0.65rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.project-sections [hidden],
+.project-filters[hidden] {
+    display: none !important;
+}
+
+.project-sections > section,
+.project-archive {
+    scroll-margin-top: 6rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+    gap: 0 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-list li {
+    border-bottom: 1px solid var(--border);
+    padding: 0.8rem 0;
+}
+
+.project-list a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-list a:hover,
+.project-list a:focus-visible {
+    text-decoration: underline;
+}
+
+.project-list span {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+}
+
+.project-archive {
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+}
+
+.project-archive summary {
+    cursor: pointer;
+}
+
+.project-archive__title {
+    display: inline;
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.project-archive__count {
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+}
+
+.project-archive__sections {
+    margin-top: 1.5rem;
+}
+
 .experience-timeline {
     position: relative;
     display: grid;

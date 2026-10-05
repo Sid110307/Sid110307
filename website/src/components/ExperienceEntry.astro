@@ -3,6 +3,7 @@ import type { ExperienceEntry as ExperienceEntryType } from "../data/experience"
 
 interface Props {
 	entry: ExperienceEntryType;
+    current?: boolean;
 }
 
 const { entry, current = false } = Astro.props;

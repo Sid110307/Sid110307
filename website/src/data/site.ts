@@ -1,5 +1,5 @@
 export const SITE_TITLE = "Siddharth Praveen Bharadwaj";
-export const SITE_DESCRIPTION = "Systems and embedded developer working on operating systems, virtual machines, and full-stack applications.";
+export const SITE_DESCRIPTION = "I build software and hardware across the stack, from embedded electronics and operating systems to scientific instruments, geospatial platforms, and full-stack applications.";
 export const SITE_URL = "https://sid110307.github.io";
 
 export const AUTHOR = {
@@ -16,40 +16,6 @@ export const SOCIAL_LINKS = [
 	{ label: "LinkedIn", url: "https://linkedin.com/in/sid110307" },
 	{ label: "X/Twitter", url: "https://x.com/CoolorFoolSRS" },
 	{ label: "DEV Community", url: "https://dev.to/@sid110307" },
-];
-
-export const PRIVATE_PROJECTS = [
-	{
-		name: "HustleX",
-		url: "https://hustlex.club",
-		description: "Gamified fitness app that rewards you for your fitness activity.",
-	},
-	{ name: "Ankura", url: "https://ankura.netlify.app", description: "A community-powered sapling rescue platform." },
-	{
-		name: "TreeMap",
-		url: "https://github.com/Sid110307/TreeMap",
-		description: "Geospatial tree mapping tool for environmental research with on-device AI and offline-first support.",
-	},
-	{
-		name: "SmartMoisture-MSP430",
-		url: "https://github.com/Sid110307/SmartMoisture-MSP430",
-		description: "BLE soil moisture sensor and temperature sensor project using TI MSP430 MCU.",
-	},
-	{
-		name: "PVDashboard",
-		url: "https://github.com/Sid110307/PVDashboard",
-		description: "Real-time photovoltaic monitoring dashboard for PV reliability test bed.",
-	},
-	{
-		name: "Attendifier",
-		url: "https://github.com/Sid110307/Attendifier",
-		description: "Face recognition-based attendance management system.",
-	},
-	{
-		name: "Earther",
-		url: "https://github.com/Sid110307/Earther",
-		description: "Android app for voltage and GPS data logging with graph visualization and CSV export.",
-	},
 ];
 
 export const GITHUB_STATS = [

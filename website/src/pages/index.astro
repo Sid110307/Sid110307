@@ -2,8 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import PublicationCard from "../components/PublicationCard.astro";
+import ExperienceEntry from "../components/ExperienceEntry.astro";
 import SocialIcon from "../components/Social";
-import { AUTHOR, PRIVATE_PROJECTS, GITHUB_STATS, SOCIAL_LINKS, SITE_DESCRIPTION } from "../data/site";
+import { AUTHOR, GITHUB_STATS, SOCIAL_LINKS, SITE_DESCRIPTION } from "../data/site";
 import { PROJECTS, FEATURED_PROJECTS } from "../data/projects";
 import { EXPERIENCE } from "../data/experience";
 import { PUBLICATIONS } from "../data/publications";
@@ -34,8 +35,6 @@ const firstPublication = PUBLICATIONS[0];
             <div class="hero__intro">
                 <h1>Hey, I&apos;m Siddharth</h1>
                 <p class="hero__lede">{SITE_DESCRIPTION}</p>
-                <p class="hero__lede">I focus on embedded systems, hardware and PCB development, operating systems and
-                    emulation, languages, interpreters, and compilers, and mobile and full-stack development.</p>
             </div>
             <div class="hero__actions" aria-label="Social links">
                 {SOCIAL_LINKS.map((link) => (
@@ -56,24 +55,13 @@ const firstPublication = PUBLICATIONS[0];
     </section>
     <section class="site-shell section">
         <p class="section__eyebrow">
-            <a style="text-decoration: none; color: inherit;" href={withBase("/projects/")}>Selected public projects</a>
+            <a style="text-decoration: none; color: inherit;" href={withBase("/projects/")}>Featured projects</a>
         </p>
         <div class="card-grid">
 			{featured.map((project) =>
                     <ProjectCard project={project} />)}
         </div>
-    </section>
-    <section class="site-shell section">
-        <p class="section__eyebrow">Private / internal projects</p>
-        <p class="section__description">Some source code is private because of organizational or other constraints.</p>
-        <div class="card-grid">
-			{PRIVATE_PROJECTS.map((project) => (
-                    <article class="project-card">
-                        <h3 class="project-card__title"><a href={project.url}>{project.name}</a></h3>
-                        <p class="project-card__description">{project.description}</p>
-                    </article>
-			))}
-        </div>
+        <p><a href={withBase("/projects/")}>Browse all projects →</a></p>
     </section>
     <section class="site-shell section">
         <p class="section__eyebrow">
@@ -86,30 +74,10 @@ const firstPublication = PUBLICATIONS[0];
         </p>
         <div class="experience-timeline">
             {EXPERIENCE.map((entry, index) => (
-                <article class="timeline-entry">
-                    <div class="timeline-entry__marker" aria-hidden="true">
-                        <span class="timeline-entry__dot"></span>
-                    </div>
-                    <div class="timeline-entry__content">
-                        <div class="timeline-entry__header">
-                            <div>
-                                <h3 class="timeline-entry__title">{entry.title}</h3>
-                                <p class="timeline-entry__organization">
-                                    {entry.organization}
-                                </p>
-                            </div>
-
-                            <time class="timeline-entry__date">
-                                {entry.date}
-                            </time>
-                        </div>
-                        <ul class="timeline-entry__bullets">
-                            {entry.bullets.map((bullet) => (
-                                <li>{bullet}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </article>
+                <ExperienceEntry
+                    entry={entry}
+                    current={index === 0}
+                />
             ))}
         </div>
     </section>

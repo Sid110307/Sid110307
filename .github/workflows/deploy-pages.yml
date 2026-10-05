@@ -22,16 +22,19 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: 10
+          version: 12.9.1
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: latest
+          node-version-file: website/.nvmrc
           cache: pnpm
           cache-dependency-path: website/pnpm-lock.yaml
       - name: Install dependencies
         working-directory: website
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: Check types
+        working-directory: website
+        run: pnpm run check
       - name: Build
         working-directory: website
         run: pnpm run build
